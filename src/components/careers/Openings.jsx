@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
-const BASE_URL = process.env.NEXT_PUBLIC_PYJAMAHR_API_BASEURL;
-const TOKEN = process.env.NEXT_PUBLIC_PYJAMAHR_API_TOKEN;
+const BASE_URL = "https://api.pyjamahr.com/api/public";
+const TOKEN = "8ab9ca8743bd4b0239586343b6ab209f2d36ea37";
 
 // Helper function to format job type
 const formatJobType = (jobType) => {

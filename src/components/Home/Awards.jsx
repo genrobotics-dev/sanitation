@@ -9,7 +9,7 @@ import img4 from "@/assets/awards/young_changemaker_award.webp";
 import img5 from "@/assets/awards/infosys_aarohan_social_innovation_award.webp";
 import img6 from "@/assets/awards/amrut_technology_award.webp";
 import img7 from "@/assets/awards/birac_social_impact_award.webp";
-import img8 from "@/assets/awards/modi_with_bandicoot.webp";
+import img8 from "@/assets/awards/startup_india_certificate.webp";
 import img11 from "@/assets/awards/pride_of_kerala_award.webp";
 import img12 from "@/assets/awards/the_level_next_award.webp";
 import img13 from "@/assets/awards/ficci_award_2019.webp";

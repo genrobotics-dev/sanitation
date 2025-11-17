@@ -34,7 +34,7 @@ function Hero2() {
             id="bandicoot_logo"
           />
         </div>
-        <h1 className="since-banner home">
+        <h1 className="since-banner home" id="bandicoot_title">
           Engineered to Clean Any Type of Manhole, 
           <span className="secondLine break-line">
           Ensuring Safety and Dignity for Sanitation Workers.

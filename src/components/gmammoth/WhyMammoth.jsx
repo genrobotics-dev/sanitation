@@ -11,7 +11,7 @@ function WhyMammoth() {
           <div className="flex flex-col items-center text-center">
             <div className="lg:hidden why_bandicoot_content">
               <h1>Why G Mammoth?</h1>
-              <span>One Machine, Four Powerful Solutions</span>
+              <span className="mammoth_subtitle">One Machine, Four Powerful Solutions</span>
               <hr />
             </div>
             <div className="lg:flex">

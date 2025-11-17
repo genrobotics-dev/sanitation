@@ -3,18 +3,18 @@ import React, { useEffect, useState } from "react";
 
 import pm1 from "@/assets/recognitions/modi_with_bandicoot1.webp";
 import pm2 from "@/assets/recognitions/modi_with_bandicoot2.webp";
-import tn from "@/assets/recognitions/uttarpradesh_launch.webp";
-import gt from "@/assets/recognitions/statewide_deployment1.webp";
-import gt2 from "@/assets/recognitions/statewide_deployment2.webp";
-import Uttarakhand from "@/assets/recognitions/maharashtra_launch1.webp";
-import kl1 from "@/assets/recognitions/maharashtra_launch2.webp";
-import kl2 from "@/assets/recognitions/tamilnadu_mobility_launch.webp";
-import mh1 from "@/assets/recognitions/gujarat_launch1.webp";
-import mh2 from "@/assets/recognitions/gujarat_launch2.webp";
-import socialJustice from "@/assets/recognitions/ulhasnagar_launch1.webp";
-import mhGold1 from "@/assets/recognitions/ulhasnagar_launch2.webp";
-import mhGold2 from "@/assets/recognitions/uttarakhand_launch.webp";
-import up1 from "@/assets/recognitions/dehradun_expo.webp";
+import up from "@/assets/recognitions/uttarpradesh_launch.webp";
+import statewide1 from "@/assets/recognitions/statewide_deployment1.webp";
+import statewide2 from "@/assets/recognitions/statewide_deployment2.webp";
+import maharashtra1 from "@/assets/recognitions/maharashtra_launch1.webp";
+import maharashtra2 from "@/assets/recognitions/maharashtra_launch2.webp";
+import tn from "@/assets/recognitions/tamilnadu_mobility_launch.webp";
+import guj1 from "@/assets/recognitions/gujarat_launch1.webp";
+import guj2 from "@/assets/recognitions/gujarat_launch2.webp";
+import ulhasnagar1 from "@/assets/recognitions/ulhasnagar_launch1.webp";
+import ulhasnagar2 from "@/assets/recognitions/ulhasnagar_launch2.webp";
+import uttarakhand from "@/assets/recognitions/uttarakhand_launch.webp";
+import dehradune from "@/assets/recognitions/dehradun_expo.webp";
 
 import Image from "next/image";
 import Slider from "react-slick";
@@ -34,25 +34,25 @@ const initiatives = [
     title: "Uttar Pradesh: A New Era of Worker Safety",
     description:
       "UP Chief Minister Shri Yogi Adityanath launched Bandicoot for the end of manual scavenging. This milestone reflects the government’s commitment to worker safety and dignity by replacing hazardous manual methods with robotic technology.",
-    image1: up1,
+    image1: up,
     image2: null,
-    mobileImage: up1,
+    mobileImage: up,
   },
   {
     title: "Kerala’s Pioneering Commitment: Statewide Deployment",
     description:
       "Hon’ble Chief Minister of Kerala, Shri Pinarayi Vijayan, inaugurated Bandicoot Robot in February 2018, marking the beginning of a new era in sanitation. He also signed a landmark MOU for the statewide deployment of Bandicoot robots, reaffirming Kerala’s commitment to eradicating manual scavenging and restoring safety and dignity for sanitation workers.",
-    image1: kl1,
-    image2: kl2,
-    mobileImage: kl1,
+    image1: statewide1,
+    image2: statewide2,
+    mobileImage: statewide1,
   },
   {
     title: "Driving Dignity in Sanitation: Maharashtra Adopts Bandicoot Robots",
     description:
       "Hon’ble Deputy CM Devendra Fadnavis witnessed the Bandicoot Robot in action during TechWari at Mantralaya, reaffirming the state’s commitment to smart and safe sanitation. Now operational in cities like Nagpur, Sambhaji Nagar, and Ulhasnagar, the robots are accelerating the move toward eliminating manual scavenging.",
-    image1: mhGold1,
-    image2: mhGold2,
-    mobileImage: mhGold2,
+    image1: maharashtra1,
+    image2: maharashtra2,
+    mobileImage: maharashtra2,
   },
   {
     title: "Tamil Nadu: Revolutionizing Urban Sanitation with Mobility",
@@ -73,33 +73,33 @@ const initiatives = [
     title: "Gujarat’s Vision for Progress: Advanced Technology in Action",
     description:
       "Gujarat is taking a significant step in urban sanitation. With the deployment of Bandicoot, Chief Minister Bhupendra Patel showcased the state’s dedication to smart city development projects by Bandicoot’s success. So far, 20+ Bandicoot robots have been welcomed across the state, reflecting Gujarat’s proactive approach in adopting robotic solutions for safe and efficient sanitation.",
-    image1: gt,
-    image2: gt2,
-    mobileImage: gt2,
+    image1: guj1,
+    image2: guj2,
+    mobileImage: guj2,
   },
   {
     title: "Maharashtra’s Urban Development: Ulhasnagar Leads the Way",
     description:
       "Hon'ble Minister Urban Development of Maharashtra, Shri Eknath Shinde, inaugurated Bandicoot in Ulhasnagar under #MissionZeroManualScavenging. This initiative marks a major step in transforming sanitation and uplifting worker dignity.",
-    image1: mh1,
-    image2: mh2,
-    mobileImage: mh1,
+    image1: ulhasnagar1,
+    image2: ulhasnagar2,
+    mobileImage: ulhasnagar1,
   },
   {
     title: "Uttarakhand: Smart Cities, Smarter Sanitation",
     description:
       "Bandicoot Robot was launched in Uttarakhand by Hon'ble Chief Minister Shri. Pushkar Singh Dhami as part of the Dehradun Smart City initiative—advancing the state’s mission to eliminate manual scavenging through modern technology.",
-    image1: Uttarakhand,
+    image1: uttarakhand,
     image2: null,
-    mobileImage: Uttarakhand,
+    mobileImage: uttarakhand,
   },
   {
     title: " Innovation for Social Justice",
     description:
       "At the Chintan Shivir 2024 Expo in Dehradun, Bandicoot captured attention for its revolutionary role in eliminating manual scavenging. Hon’ble Union Minister Dr. Virendra Kumar, along with Sh. Ravinder Indraj Singh, Sh. Amit Yadav, IAS, and Sh. Prabhat Kumar Singh (MD, NSKFDC), visited the exhibit and lauded Bandicoot’s contribution to advancing dignity and safety in sanitation.",
-    image1: socialJustice,
+    image1: dehradune,
     image2: null,
-    mobileImage: socialJustice,
+    mobileImage: dehradune,
   },
 ];
 

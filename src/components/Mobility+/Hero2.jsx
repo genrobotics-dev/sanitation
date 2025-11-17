@@ -34,7 +34,7 @@ function Hero2() {
             layout="responsive"
           />
         </div>
-        <h1 className="since-banner home">
+        <h1 className="since-banner home" id="mobility_title">
            
         Vehicle Integrated Robotic 
           <span className="secondLine break-line">

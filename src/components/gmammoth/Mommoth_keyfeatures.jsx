@@ -7,8 +7,7 @@ import feature2 from "@/assets/products/gmammoth/features/suction_utility.webp";
 import feature3 from "@/assets/products/gmammoth/features/jetting_utility.webp";
 import feature4 from "@/assets/products/gmammoth/features/inspection_utility.webp";
 import feature5 from "@/assets/products/gmammoth/features/tank_tipping_option.webp";
-import feature6 from "@/assets/products/gmammoth/features/inbuilt_safety_valves.webp";
-import feature7 from "@/assets/products/gmammoth/features/openable_rear_dish.webp";
+import feature6 from "@/assets/products/gmammoth/features/openable_rear_dish.webp";
 
 const cleaningFeatures = [
   {
@@ -42,16 +41,10 @@ const cleaningFeatures = [
     image: feature5,
   },
   {
-    title: "Inbuilt Safety Valves",
-    description:
-      "Fitted with pressure-regulating valves at inlet and outlet to prevent backflow and ensure safe, controlled operation.",
-    image: feature6,
-  },
-  {
     title: "Openable Rear Dish",
     description:
       "The rear end features an open-air discharge dish, enabling complete and contactless waste disposal, eliminating the need for any manual intervention.",
-    image: feature7,
+    image: feature6,
   },
 ];
 

@@ -7,13 +7,13 @@ import Modal from "react-bootstrap/Modal";
 import study1 from "@/assets/case-study/ahmedabad_airport.webp";
 import study2 from "@/assets/case-study/robotic_pit_cleaning.webp";
 import study3 from "@/assets/case-study/bpcl_chembur.webp";
-import study4 from "@/assets/case-study/wilboar_trivandrum.webp";
+import study4 from "@/assets/case-study/mobility_at_aurangabad.webp";
 import study6 from "@/assets/case-study/mrpl_mangalore.webp";
 import study7 from "@/assets/case-study/bandicoot_in_leh.webp";
 import study8 from "@/assets/case-study/bandicoot_in_rajasthan.webp";
 import study9 from "@/assets/case-study/manhole_cleaning_in_chennai.webp";
 import study10 from "@/assets/case-study/wilboar_at_leh.webp";
-import study11 from "@/assets/case-study/mobility_at_aurangabad.webp";
+import study11 from "@/assets/case-study/wilboar_trivandrum.webp";
 
 import * as Lu from "react-icons/lu";
 import * as Md from "react-icons/md";

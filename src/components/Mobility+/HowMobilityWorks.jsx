@@ -46,7 +46,7 @@ function HowMobilityWorks() {
       title="How Bandicoot </br> Mobility+ Works?"
       subTitle="An Integrated and Automated Cleaning Cycle"
       description="Bandicoot Mobility+ streamlines the entire manhole cleaning process through seamless vehicle integration and automation."
-      video="https://www.youtube.com/embed/8CtmdQHt3_g"
+      video="https://www.youtube.com/embed/sW-gW7TM1sw?si=FSGljkmB_Y1X4siJ"
       robotOperationSteps={bandicootOperations}
     />
   );

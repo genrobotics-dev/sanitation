@@ -88,7 +88,7 @@ function MobilityKeyFeatures() {
   console.log(displayedFeatures);
 
   return (
-    <section className="key_features">
+    <section className="key_features" id="mobility_key_features">
       <div className="md:container-fluid features_container">
         <div className="lg:px-[2rem]">
           <div className="title_area">

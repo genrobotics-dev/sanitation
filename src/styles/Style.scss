@@ -387,8 +387,17 @@ header {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-
-
+  #mobility_title{
+    width:100% !important;
+  }
+  #bandicoot_title{
+    width: 100% !important;
+  }
+  #hero6{
+    .sub-content{
+      width: 55% !important;
+    }
+  }
   &::after {
     /*content: "";
     position: absolute;
@@ -430,7 +439,7 @@ header {
       padding-left: 50px;
       font-family: "Anton", sans-serif;
       color: #fff;
-      font-size: 2.6rem;
+      font-size: 2rem !important;
       transition: all 0.2s ease-in-out;
     }
 
@@ -487,7 +496,7 @@ header {
       -webkit-backdrop-filter: blur(1px);
       width: 55%;
     }
-
+  
     .sub-content {
       color: #fff;
       padding-top: 1rem;
@@ -505,7 +514,7 @@ header {
     }
 
     .since-banner.home .secondLine {
-      display: inline;
+      display: block;
       color: inherit;
     }
 
@@ -530,8 +539,8 @@ header {
       }
       top: 100px !important;
     }
-  }
-  @media screen and (max-width: 1024px) {
+   }
+   @media screen and (max-width: 1024px) {
     #white-text {
       color: white !important;
     }
@@ -541,13 +550,20 @@ header {
       font-size: 1rem;
       text-align: center;
     }
-  }
-  #service_heading {
+   }
+   #service_heading {
     @media (min-width: 769px) and (max-width: 1024px) {
       top: 15% !important;
     }
   }
-
+  /* #service_heading{
+      .since-banner{
+          background: linear-gradient(to right,
+          #fcd901 0%,
+          #fcda01bc 50%,
+          rgba(255, 255, 255, 0) 65%) !important;
+    }
+  }*/
   .explore_btn {
     padding: 10px 20px;
     background-color: #fcd901;
@@ -581,7 +597,7 @@ header {
       bottom: 50px;
 
       .sub-content {
-        width: 75%;
+        width: 50%;
         p {
           font-size: 1.05rem;
           line-height: 1.5rem;
@@ -2104,7 +2120,7 @@ header {
     p {
       font-family: "Roboto", sans-serif;
       text-align: center;
-      font-size: 1rem !important;
+      font-size: 1.25rem !important;
     }
 
     .padding_align {
@@ -2127,6 +2143,7 @@ header {
         p {
           font-family: "Roboto", sans-serif;
           text-align: justify;
+          font-size: 1rem !important;
           width: 70%;
           margin: 0 auto;
           padding-top: 10px;
@@ -2135,8 +2152,8 @@ header {
 
         .image1_wrapper {
           width: 100%;
-          max-height: 680px;
-          overflow: hidden;
+          /*max-height: 680px;*/
+          overflow:visible;
           border-radius: 20px;
 
           img {
@@ -2422,7 +2439,7 @@ header {
 
     p {
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.25rem !important;
     }
 
     @media screen and (max-width: 1024px) {
@@ -2853,7 +2870,12 @@ header {
 /* Modals section */
 .modals_sec {
   padding: 6rem 0;
-
+    .rob_pro_contents{
+      p{
+        text-align: center !important;
+        font-size: 1.25rem !important;
+      }
+    }
   .engagementCard {
     position: relative;
     background-color: #D9D9D9;
@@ -2868,7 +2890,7 @@ header {
       display: flex;
       align-items: center;
       gap: 30;
-
+      
       @media screen and (max-width: 1440px) {
         gap: 20;
         margin-top: 2rem;
@@ -3342,6 +3364,11 @@ header {
     background-image: url("../assets/flare.webp");
     background-size: cover;
     min-height: 500px;
+    .rob_pro_contents{
+      p{
+        font-size: 1.25rem !important;
+      }
+    }
 
     .service_card {
       position: relative;
@@ -3727,7 +3754,7 @@ section.service_sec.gcrow_services .service_card p {
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     font-family: "Anton", sans-serif;
   }
@@ -3845,7 +3872,7 @@ section.service_sec.gcrow_services .service_card p {
   background-color: #f4f4f4;
 
   .rob_pro_contents .text-base {
-    font-size: 2rem;
+    font-size: 1.25rem !important;
     text-align: center;
     padding-bottom: 3rem;
   }
@@ -4398,6 +4425,11 @@ section.service_sec.gcrow_services .service_card p {
   padding: 6rem 0;
   height: 100%;
   width: 100%;
+  .rob_pro_contents{
+    p{
+      font-size: 1.25rem !important;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     padding: 0;
@@ -4956,7 +4988,7 @@ section.service_sec.gcrow_services .service_card p {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: fill;
     }
 
     @media screen and (max-width: 2560px) {
@@ -4988,9 +5020,12 @@ section.service_sec.gcrow_services .service_card p {
 
     p {
       font-family: "Roboto", sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       text-align: justify;
     }
+    /*.mammoth_subtitle p{
+      font-weight: 600 !important;
+    }*/
 
     @media screen and (max-width: 768px) {
       margin-top: 20px;
@@ -5205,7 +5240,7 @@ section.service_sec.gcrow_services .service_card p {
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       text-align: center;
       font-family: var(--roboto-font);
 
@@ -5420,15 +5455,32 @@ section.service_sec.gcrow_services .service_card p {
     }
   }
 }
+/* Apply only inside mobility_key_features 
+#mobility_key_features .feature_large .grid {
+  position: relative;
+}
 
-/*  Applies only to Bandicoot Key Features */
+#mobility_key_features .feature_large .grid > .card:nth-child(9) {
+  grid-column: 2 / span 1;
+}
+
+#mobility_key_features .feature_large .grid > .card:nth-child(10) {
+  grid-column: 3 / span 1;
+}
+
+
+#mobility_key_features .feature_large .grid > .card:nth-child(9),
+#mobility_key_features .feature_large .grid > .card:nth-child(10) {
+  justify-self: center;
+}*/
+
+/* Applies only to Bandicoot Key Features */
 section.key_features.bandicoot_key_features .feature_large {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem !important;
   justify-items: center;
 }
-
 section.key_features.bandicoot_key_features .feature_large>.flex,
 section.key_features.bandicoot_key_features .feature_large>.flex>.grid {
   display: contents !important;
@@ -5444,6 +5496,7 @@ section.key_features.bandicoot_key_features .feature_large .flex:nth-of-type(2) 
   left: 195%;
   transform: translateX(-50%);
 }
+
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
   section.key_features.bandicoot_key_features {
@@ -6303,11 +6356,12 @@ section.key_features .flex.justify-center.mt-10 {
           width: 100%;
           height: 400px;
           overflow: hidden;
+          border-radius: 35px;
 
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fill;
           }
         }
 
@@ -6812,7 +6866,7 @@ section.key_features .flex.justify-center.mt-10 {
   padding: 5rem 0;
 
   .header_title {
-    padding-bottom: 5rem;
+    /*padding-bottom: 5rem;*/
 
     h1 {
       font-family: "Anton", sans-serif;
@@ -6996,11 +7050,12 @@ section.key_features .flex.justify-center.mt-10 {
 
   .sub_title {
     text-align: center;
+    font-weight: 600;
   }
 
   p {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.7rem;
     text-align: justify;
   }
@@ -7247,7 +7302,7 @@ section.key_features .flex.justify-center.mt-10 {
 
   p {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 2rem;
     text-align: justify;
   }
@@ -7647,6 +7702,14 @@ section.key_features .flex.justify-center.mt-10 {
   background: linear-gradient(to right, #fcd901, #fdf4ae);
   padding: 6rem 1rem;
   text-align: center;
+  .form_title{
+    h1{
+      font-size: 2.5rem !important;
+    }
+    p{
+      font-size: 1.25rem !important;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     padding: 3rem 20px !important;
@@ -8039,9 +8102,9 @@ section.key_features .flex.justify-center.mt-10 {
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-family: "Roboto", sans-serif;
-      text-align: justify;
+      text-align: center;
       width: 100%;
       margin: 0 auto;
       padding-bottom: 20px;
@@ -9578,6 +9641,7 @@ section.key_features .flex.justify-center.mt-10 {
   h1 {
     font-family: "Anton", sans-serif;
     text-align: center;
+    font-size: 2.5rem !important;
   }
 
   p {
@@ -9735,11 +9799,6 @@ section.key_features .flex.justify-center.mt-10 {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
-  .wilBoarApplications_ h1 {
-    font-size: 3rem !important;
-    padding-bottom: 3rem;
-  }
 }
 
 #hero6{
@@ -9797,6 +9856,9 @@ section.key_features .flex.justify-center.mt-10 {
     border: none;
     height: 100%;
     box-shadow: 2px 3px 5px #00000029;
+    p{
+      text-align: justify;
+    }
 
     @media screen and (max-width:768px) {
       padding: 2rem 1rem;
@@ -10093,7 +10155,7 @@ section.key_features .flex.justify-center.mt-10 {
 
     p {
       font-family: "Roboto", sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem !important;
       text-align: justify;
     }
 
@@ -10497,6 +10559,8 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
   height: 100%;
   min-height: 85vh;
   overflow: hidden;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 
   img {
     width: 100%;

@@ -7,41 +7,42 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { CustomNextArrow, CustomPrevArrow } from "../CustomArrows";
 
 function Clients({ clients }) {
+  const isStatic = clients && clients.length <= 5;
   const settings = {
     dots: false,
-    infinite: clients && clients.length > 5,
-    slidesToShow: clients && clients.length > 5 ? 6 : clients.length,
-    autoplay: clients && clients.length > 5,
+    infinite: !isStatic && clients.length > 5,
+    slidesToShow:  isStatic ? clients.length : 6,
+    autoplay: !isStatic,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    arrows: false,
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    draggable: clients && clients.length > 5,
+    arrows: !isStatic,
+    pauseOnHover: !isStatic,
+    pauseOnFocus: !isStatic,
+    draggable: !isStatic,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: isStatic ? clients.length : 3,
+          slidesToScroll: isStatic ? clients.length : 3,
           autoplaySpeed: 200,
-          infinite: true,
+          infinite: !isStatic,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: isStatic ? clients.length : 2,
+          slidesToScroll: isStatic ? clients.length : 2,
           initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: isStatic ? clients.length : 1,
+          slidesToScroll: isStatic ? clients.length : 1,
         },
       },
     ],

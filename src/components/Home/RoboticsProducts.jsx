@@ -4,16 +4,16 @@ import React, { useEffect } from "react";
 import * as Lu from "react-icons/lu";
 
 import bandicootMobility from "@/assets/product-logos/product_mobility.webp";
-import bandicootMobilityTitle from "@/assets/product-logos/mobility_card_logo.webp";
+import bandicootMobilityTitle from "@/assets/product-logos/Mobility .webp";
 import bandicoot from "@/assets/product-logos/product_bandicoot.webp";
-import bandicootTitle from "@/assets/product-logos/bandicoot_card_logo.webp";
+import bandicootTitle from "@/assets/product-logos/Bandicoot.webp";
 import wilboar from "@/assets/product-logos/product_wilboar.webp";
-import wilboarTitle from "@/assets/product-logos/wilboar_card_logo.webp";
+import wilboarTitle from "@/assets/product-logos/Wilboar.webp";
 import gmammoth from "@/assets/product-logos/product_mammoth.webp";
-import gmammothTitle from "@/assets/product-logos/gmammoth_card_logo.webp";
+import gmammothTitle from "@/assets/product-logos/Mammoth.webp";
 import gCrowTitle from "@/assets/product-logos/gcrow_card_logo.webp";
 import gCrow from "@/assets/product-logos/product_gcrow.webp";
-import gMambaTitle from "@/assets/product-logos/gmamba_card_logo.webp";
+import gMambaTitle from "@/assets/product-logos/G Mamba.webp";
 import gMamba from "@/assets/product-logos/product_gmamba.webp";
 
 import Image from "next/image";
@@ -72,7 +72,7 @@ const products = [
   {
     titlImg: gMambaTitle,
     image: gMamba,
-    subTitle: "G Mamba",
+    subTitle: "Clear insight | Exact precision | Better pipeline inspection",
     description:
       "A swift and smart robotic system for precise underground and pipeline inspections.",
     imageAlt: "g Mamba",
@@ -92,9 +92,9 @@ function RoboticsProducts() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: inView,
+    autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     responsive: [
