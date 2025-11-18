@@ -49,7 +49,7 @@ const initiatives = [
   {
     title: "Driving Dignity in Sanitation: Maharashtra Adopts Bandicoot Robots",
     description:
-      "Hon’ble Deputy CM Devendra Fadnavis witnessed the Bandicoot Robot in action during TechWari at Mantralaya, reaffirming the state’s commitment to smart and safe sanitation. Now operational in cities like Nagpur, Sambhaji Nagar, and Ulhasnagar, the robots are accelerating the move toward eliminating manual scavenging.",
+      "Hon’ble CM Devendra Fadnavis witnessed the Bandicoot Robot in action during TechWari at Mantralaya, reaffirming the state’s commitment to smart and safe sanitation. Now operational in cities like Nagpur, Sambhaji Nagar, and Ulhasnagar, the robots are accelerating the move toward eliminating manual scavenging.",
     image1: maharashtra1,
     image2: maharashtra2,
     mobileImage: maharashtra2,
