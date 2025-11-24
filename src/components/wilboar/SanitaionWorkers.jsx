@@ -28,7 +28,7 @@ const workers = [
   { image: img10, alt: "Worker beside Robotic Scavenger" },
   { image: img11, alt: "Worker operating Robotic Scavenger" },
   { image: img12, alt: "Workers cleaning manhole using bandicoot" },
-  ];
+];
 
 import Slider from "react-slick";
 
@@ -76,17 +76,20 @@ function SanitaionWorkers() {
       <p className="sub_title">More Than Just a Robot</p>
       <br />
       <p className="sub_title2">
-        Bandicoot is not merely a technological advancement; it is a tool for
-        social upliftment. By eliminating manual scavenging, we are restoring
-        dignity to sanitation workers and providing them with safer, healthier,
-        and more respectable employment opportunities as 'Robotic Operators'. We
-        provide comprehensive training to Sanitation workers, empowering them
-        with the skills to operate and maintain these advanced robotic systems.
-        This transition not only improves their quality of life but also
-        integrates them into a technology-driven workforce, fostering a sense of
-        pride and purpose.
+        Sanitation robots are not just technological upgrades; they are catalysts for social
+        upliftment. By eliminating manual entry into hazardous spaces, they restore dignity
+        to sanitation workers and offer safer, healthier, and more respected roles as Robotic Operators.
+        Through focused training programs, workers gain the skills to operate and maintain advanced robotic systems.
+        This shift not only enhances their livelihood but also integrates them into a modern, technology-driven workforce, fostering confidence, pride, and long-term growth.
       </p>
       <br />
+      <style jsx global>{`
+        @media screen and (max-width: 768px) {
+          .slider_wrapper .slick-slide > div {
+            width: 100% !important;
+          }
+        }
+      `}</style>
       <div className="slider_wrapper">
         <Slider {...settings}>
           {workers.map((data, index) => {

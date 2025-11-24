@@ -65,7 +65,7 @@ function BandicootUpdates() {
   return (
     <section className="bandicoot_updates">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="gray_card">
             <div className="container">
               <div className="rob_pro_contents">

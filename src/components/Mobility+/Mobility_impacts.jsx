@@ -20,7 +20,7 @@ function Mobility_impacts() {
       value: 75,
     },
   ];
-  return <Impact cols={4} count="28" stats={stats} />;
+  return <Impact cols={4} count="28" stats={stats} showROI={true} />;
 }
 
 export default Mobility_impacts;

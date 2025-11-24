@@ -1,0 +1,130 @@
+{
+  "format": "custom",
+  "id": "blogs",
+  "label": "Blogs",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
+      },
+      "seo_title": {
+        "type": "Text",
+        "config": {
+          "label": "SEO Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,paragraph"
+        }
+      },
+      "keywords": {
+        "type": "Group",
+        "config": {
+          "label": "Keywords",
+          "repeat": true,
+          "fields": {
+            "primary_keywords": {
+              "type": "Text",
+              "config": {
+                "label": "Primary Keywords",
+                "placeholder": ""
+              }
+            },
+            "secondary_keywords": {
+              "type": "Text",
+              "config": {
+                "label": "Secondary Keywords",
+                "placeholder": ""
+              }
+            },
+            "voice_search_friendly_phrases": {
+              "type": "Text",
+              "config": {
+                "label": "Voice Search Friendly Phrases",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "open_graph": {
+        "type": "Group",
+        "config": {
+          "label": "Open Graph",
+          "repeat": true,
+          "fields": {
+            "title_for_open_graph": {
+              "type": "Text",
+              "config": {
+                "label": "Title for open graph",
+                "placeholder": ""
+              }
+            },
+            "description_for_open_graph": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Description for open graph",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "image_for_open_graph": {
+              "type": "Image",
+              "config": {
+                "label": "Image for open graph",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "summary": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Summary",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image ",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "contents": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Contents",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

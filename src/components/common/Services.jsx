@@ -5,7 +5,7 @@ function Services({ benefits, title, description, className = "" }) {
   return (
     <section className={`service_sec ${className}`} id="services">
       <div className="md:container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="services_wrapper">
             <div className="rob_pro_contents">
               <h1 style={{ color: "#fcd901", marginBottom: "1rem" }}>{title}</h1>
@@ -30,7 +30,7 @@ function Services({ benefits, title, description, className = "" }) {
                   const colSize = Math.max(3, Math.floor(12 / benefits.length));
                   return (
                     <div
-                      className={`col-lg-${colSize} col-md-6 col-sm-12 px-0`}
+                      className={`col-lg-3 col-md-6 col-sm-12 px-0`}
                       key={index3}
                       style={{
                         flex: `1 1 ${100 / benefits.length}%`,

@@ -5,10 +5,12 @@ import rec1 from "@/assets/products/bandicoot/recognitions/supreme_court_of_indi
 import rec2 from "@/assets/products/bandicoot/recognitions/swachh_survekshan_toolkit.webp";
 import rec3 from "@/assets/products/bandicoot/recognitions/national_humanrights_commission.webp";
 import rec4 from "@/assets/products/bandicoot/recognitions/amrut_certification.webp";
-import rec5 from "@/assets/products/bandicoot/recognitions/sbm_ersu_listing.webp";
+import rec5 from "@/assets/products/bandicoot/recognitions/ersu_listing.webp";
 import rec6 from "@/assets/products/bandicoot/recognitions/nskfdc.webp";
 import rec7 from "@/assets/products/bandicoot/recognitions/swachhata_startup_challenge.webp";
 import rec8 from"@/assets/products/bandicoot/recognitions/ministry_of_social_justice_and_empowerment.webp";
+import rec9 from"@/assets/products/bandicoot/recognitions/national_commission_for_safai_karamcharis.webp";
+
 import Image from "next/image";
 
 import * as Lu from "react-icons/lu";
@@ -65,6 +67,12 @@ const recognitions = [
       "Highlighted in the National Action for Mechanised Sanitation Ecosystem (NAMASTE), under Point 6.1, for identification and adoption of robotic solutions like Bandicoot.",
     logo: rec8,
   },
+  {
+    title: "National Commission for Safai Karamcharis (NCSK)",
+    description:
+      "Recognized in the FY 2021–22 Annual Report of NCSK as a key solution for eliminating manual scavenging.",
+    logo: rec9,
+  },
 ];
 
 function Recognitions() {
@@ -119,7 +127,7 @@ function Recognitions() {
   return (
     <section className="recognitions_sec">
       <div className="container-fluid recognition_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[3rem]">
           <h1 className="recognition_title">Recognition & Compliance</h1>
           <br />
           <div className="robo_card_wrapper">

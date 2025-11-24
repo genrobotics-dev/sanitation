@@ -70,7 +70,7 @@ function KeyFeatures() {
   return (
     <section className="gcrow_features">
       <div className="container-fluid">
-        <div className="lg:px-[2rem] ">
+        <div className="lg:px-[4rem] ">
           <div className="title_area">
             <div>
               <h1>Key Features</h1>

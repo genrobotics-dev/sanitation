@@ -36,7 +36,7 @@ function Hero7() {
           Expert Consulting for <br /> Confined Space Management
         </h1>
         <div className="sub-content md:w-3/4">
-          <p>
+          <p id="white-text">
             Ensuring Safety, Compliance, and Efficiency with Technology-Driven
             Strategies.
           </p>

@@ -12,7 +12,7 @@ function ComplexRisks() {
   return (
     <section className="complex-risks_sec">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="flex flex-col items-center text-center">
             <div className="lg:hidden why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
               <h1>The Complex Risks of Confined Spaces</h1>
@@ -35,7 +35,7 @@ function ComplexRisks() {
                 />
               </div>
               <div className="flex-1">
-                <div className="hidden lg:block why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
+                <div className="hidden lg:block why_bandicoot_content mb-6 w-full max-w-[900px] text-left">
                   <h1>The Complex Risks of Confined Spaces</h1>
                   <span className="block text-gray-600">
                     Navigating Through the Reality of Confined Spaces Cleaning

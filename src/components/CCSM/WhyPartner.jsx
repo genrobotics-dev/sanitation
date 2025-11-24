@@ -22,7 +22,7 @@ function WhyPartner() {
   return (
     <section className="why_partner_">
       <div className="container-fluid" style={{padding: "0 20px !important"}}>
-        <div className="md:px-[2rem]">
+        <div className="md:px-[4rem]">
           <h1>Why Partner with Genrobotics?</h1>
           <br />
           <div className="row">

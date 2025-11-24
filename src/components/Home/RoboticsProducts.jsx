@@ -11,7 +11,7 @@ import wilboar from "@/assets/product-logos/product_wilboar.webp";
 import wilboarTitle from "@/assets/product-logos/Wilboar.webp";
 import gmammoth from "@/assets/product-logos/product_mammoth.webp";
 import gmammothTitle from "@/assets/product-logos/Mammoth.webp";
-import gCrowTitle from "@/assets/product-logos/gcrow_card_logo.webp";
+import gCrowTitle from "@/assets/product-logos/gcrow_logo.webp";
 import gCrow from "@/assets/product-logos/product_gcrow.webp";
 import gMambaTitle from "@/assets/product-logos/G Mamba.webp";
 import gMamba from "@/assets/product-logos/product_gmamba.webp";
@@ -36,7 +36,7 @@ const products = [
   {
     titlImg: bandicootTitle,
     image: bandicoot,
-    subTitle: "Manhole Cleaning",
+    subTitle: "Delivers safe | Automated Manhole Cleaning",
     description:
       "The world’s first robotic scavenger that automates manhole cleaning with robotic arm, 360-degree vision, and advanced toxic gas sensing.",
     imageAlt: "Bandicoot robotic scavenger standing on wheels",
@@ -72,7 +72,7 @@ const products = [
   {
     titlImg: gMambaTitle,
     image: gMamba,
-    subTitle: "Clear insight | Exact precision | Better pipeline inspection",
+    subTitle: "Clear insight | Exact Precision | Better Pipeline Inspection",
     description:
       "A swift and smart robotic system for precise underground and pipeline inspections.",
     imageAlt: "g Mamba",
@@ -135,7 +135,7 @@ function RoboticsProducts() {
   return (
     <section className="robotic_products" id="solutions" ref={ref}>
       <div className="container-fluid robotics_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[3rem]">
           <div className="rob_pro_contents  robots_innerdiv">
             <h1>Our Solutions</h1>
             <p>

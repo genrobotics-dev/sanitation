@@ -75,169 +75,169 @@ import cmwssb from "@/assets/clients/cmwssb.webp";
 import gujaratUrbanDevelopmentMission from "@/assets/clients/gudm.webp";
 import indahWater from "@/assets/clients/indah_water.webp";
 const clientsData = [
-  { image: keralaWaterAuthority, alt: "Kerala Water Authority" },
-  { image: municipalCouncilTadipatri, alt: "Municipal Council Tadipatri" },
-  { image: thoothukudiSmartCity, alt: "Thoothukudi Smart City" },
-  { image: nelloreMunicipalCorporation, alt: "Nellore Municipal Corporation" },
+  { image: keralaWaterAuthority, alt: "Kerala Water Authority", width: 100, height: 100 },
+  { image: municipalCouncilTadipatri, alt: "Municipal Council Tadipatri", width: 100, height: 100 },
+  { image: thoothukudiSmartCity, alt: "Thoothukudi Smart City", width: 100, height: 100 },
+  { image: nelloreMunicipalCorporation, alt: "Nellore Municipal Corporation", width: 100, height: 100 },
   {
     image: municipalCorporationGurugram,
-    alt: "Municipal Corporation Gurugram",
+    alt: "Municipal Corporation Gurugram", width: 100, height: 100
   },
   {
     image: thanjavurMunicipalCorporation,
-    alt: "Thanjavur Municipal Corporation",
+    alt: "Thanjavur Municipal Corporation", width: 100, height: 100
   },
   {
     image: brihanmumbaiMunicipalCorporation,
-    alt: "Brihanmumbai Municipal Corporation",
+    alt: "Brihanmumbai Municipal Corporation", width: 100, height: 100
   },
   {
     image: coimbatoreMunicipalCorporation,
-    alt: "Coimbatore Municipal Corporation",
+    alt: "Coimbatore Municipal Corporation", width: 100, height: 100
   },
-  { image: ghmc, alt: "GHMC" },
-  { image: suezIndia, alt: "SUEZ India" },
-  { image: sriMuktsarSahib, alt: "Sri Muktsar Sahib" },
+  { image: ghmc, alt: "GHMC", width: 100, height: 100 },
+  { image: suezIndia, alt: "SUEZ India", width: 100, height: 100 },
+  { image: sriMuktsarSahib, alt: "Sri Muktsar Sahib", width: 100, height: 100 },
   {
     image: guwahatiMunicipalCorporation,
-    alt: "Guwahati Municipal Corporation",
+    alt: "Guwahati Municipal Corporation", width: 100, height: 100
   },
-  { image: suratMunicipalCorporation, alt: "Surat Municipal Corporation" },
-  { image: dhuleMunicipalCorporation, alt: "Dhule Municipal Corporation" },
-  { image: noidaDevelopmentAuthority, alt: "Noida Development Authority" },
-  { image: gmada, alt: "GMADA" },
-  { image: phedHaryana, alt: "PHED Haryana" },
-  { image: phedBhiwani, alt: "PHED Bhiwani" },
-  { image: sabarmatiGas, alt: "Sabarmati Gas" },
-  { image: indoreMunicipalCorporation, alt: "Indore Municipal Corporation" },
-  { image: barc, alt: "BARC" },
-  { image: tiruppurMunicipality, alt: "Tiruppur Municipality" },
+  { image: suratMunicipalCorporation, alt: "Surat Municipal Corporation", width: 100, height: 100 },
+  { image: dhuleMunicipalCorporation, alt: "Dhule Municipal Corporation", width: 100, height: 100 },
+  { image: noidaDevelopmentAuthority, alt: "Noida Development Authority", width: 100, height: 100 },
+  { image: gmada, alt: "GMADA", width: 100, height: 100 },
+  { image: phedHaryana, alt: "PHED Haryana", width: 100, height: 100 },
+  { image: phedBhiwani, alt: "PHED Bhiwani", width: 100, height: 100 },
+  { image: sabarmatiGas, alt: "Sabarmati Gas", width: 100, height: 100 },
+  { image: indoreMunicipalCorporation, alt: "Indore Municipal Corporation", width: 100, height: 100 },
+  { image: barc, alt: "BARC", width: 100, height: 100 },
+  { image: tiruppurMunicipality, alt: "Tiruppur Municipality", width: 100, height: 100 },
   {
     image: mysuruCityMunicipalCorporation,
-    alt: "Mysuru City Municipal Corporation",
+    alt: "Mysuru City Municipal Corporation", width: 100, height: 100
   },
   {
     image: vadodaraMunicipalCorporation,
-    alt: "Vadodara Municipal Corporation",
+    alt: "Vadodara Municipal Corporation", width: 100, height: 100
   },
-  { image: puriMunicipality, alt: "Puri Municipality" },
-  { image: cityOfPatna, alt: "City of Patna" },
-  { image: indianOil, alt: "Indian Oil" },
-  { image: perambalurMunicipality, alt: "Perambalur Municipality" },
+  { image: puriMunicipality, alt: "Puri Municipality", width: 100, height: 100 },
+  { image: cityOfPatna, alt: "City of Patna", width: 100, height: 100 },
+  { image: indianOil, alt: "Indian Oil", width: 100, height: 100 },
+  { image: perambalurMunicipality, alt: "Perambalur Municipality", width: 100, height: 100 },
   {
     image: greaterVisakhapatnamMunicipalCorporation,
-    alt: "Greater Visakhapatnam Municipal Corporation",
+    alt: "Greater Visakhapatnam Municipal Corporation", width: 100, height: 100
   },
   {
     image: ulhasnagarMunicipalCorporation,
-    alt: "Ulhasnagar Municipal Corporation",
+    alt: "Ulhasnagar Municipal Corporation", width: 100, height: 100
   },
   {
     image: tirunelveliMunicipalCorporation,
-    alt: "Tirunelveli Municipal Corporation",
+    alt: "Tirunelveli Municipal Corporation", width: 100, height: 100
   },
-  { image: templetechInnovations, alt: "Templetech Innovations" },
-  { image: handInHandIndia, alt: "Hand in Hand India" },
-  { image: bharatPetroleum, alt: "Bharat Petroleum" },
-  { image: tataTrusts, alt: "Tata Trusts" },
-  { image: tcs, alt: "TCS" },
-  { image: larsenToubro, alt: "Larsen & Toubro" },
-  { image: cochinShipyard, alt: "Cochin Shipyard Limited" },
-  { image: hindustanPetroleum, alt: "Hindustan Petroleum" },
-  { image: coalIndia, alt: "Coal India" },
-  { image: adityaBirla, alt: "Aditya Birla" },
-  { image: kumbakonamMunicipality, alt: "Kumbakonam Municipality" },
+  { image: templetechInnovations, alt: "Templetech Innovations", width: 100, height: 100 },
+  { image: handInHandIndia, alt: "Hand in Hand India", width: 100, height: 100 },
+  { image: bharatPetroleum, alt: "Bharat Petroleum", width: 100, height: 100 },
+  { image: tataTrusts, alt: "Tata Trusts", width: 100, height: 100 },
+  { image: tcs, alt: "TCS", width: 100, height: 100 },
+  { image: larsenToubro, alt: "Larsen & Toubro", width: 100, height: 100 },
+  { image: cochinShipyard, alt: "Cochin Shipyard Limited", width: 100, height: 100 },
+  { image: hindustanPetroleum, alt: "Hindustan Petroleum", width: 100, height: 100 },
+  { image: coalIndia, alt: "Coal India", width: 100, height: 100 },
+  { image: adityaBirla, alt: "Aditya Birla", width: 100, height: 100 },
+  { image: kumbakonamMunicipality, alt: "Kumbakonam Municipality", width: 100, height: 100 },
   {
     image: municipalCouncilAmbala,
-    alt: "Municipal Council Ambala",
+    alt: "Municipal Council Ambala", width: 100, height: 100
   },
-  { image: cHed, alt: "C-HED" },
+  { image: cHed, alt: "C-HED", width: 100, height: 100 },
   {
     image: geniusInfraEngineering,
-    alt: "Genius Infra Engineering",
+    alt: "Genius Infra Engineering", width: 100, height: 100
   },
-  { image: greaterJaipur, alt: "Greater Jaipur" },
-  { image: hsvp, alt: "HSVP" },
+  { image: greaterJaipur, alt: "Greater Jaipur", width: 100, height: 100 },
+  { image: hsvp, alt: "HSVP", width: 100, height: 100 },
   {
     image: haryanaUrbanDevelopmentAuthority,
-    alt: "Haryana Urban Development Authority",
+    alt: "Haryana Urban Development Authority", width: 100, height: 100
   },
-  { image: jaipurHeritage, alt: " Jaipur Heritage" },
-  { image: jalSansthanDehradun, alt: " Jal Sansthan Dehradun" },
+  { image: jaipurHeritage, alt: " Jaipur Heritage", width: 100, height: 100 },
+  { image: jalSansthanDehradun, alt: " Jal Sansthan Dehradun", width: 100, height: 100 },
   {
     image: jalkalVibhagNagarNigam,
-    alt: " Jalkal Vibhag Nagar Nigam",
+    alt: " Jalkal Vibhag Nagar Nigam", width: 100, height: 100
   },
-  { image: kanpurNagarNigam, alt: "Kanpur Nagar Nigam" },
-  { image: karurMunicipality, alt: "Karur Municipality" },
+  { image: kanpurNagarNigam, alt: "Kanpur Nagar Nigam", width: 100, height: 100 },
+  { image: karurMunicipality, alt: "Karur Municipality", width: 100, height: 100 },
   {
     image: khilariInfrastructure,
-    alt: "Khilari Infrastructure Pvt Ltd",
+    alt: "Khilari Infrastructure Pvt Ltd", width: 100, height: 100
   },
   {
     image: municipalCommitteeOfLeh,
-    alt: "Municipal Committee of Leh",
+    alt: "Municipal Committee of Leh", width: 100, height: 100
   },
   {
     image: meerutCityMunicipalCorporation,
-    alt: "Meerut City Municipal Corporation",
+    alt: "Meerut City Municipal Corporation", width: 100, height: 100
   },
   {
     image: municipalCorporationChandigarh,
-    alt: "Municipal Corporation Chandigarh",
+    alt: "Municipal Corporation Chandigarh", width: 100, height: 100
   },
-  { image: nagpurNagarNigam, alt: "Nagpur Nagar Nigam" },
-  { image: corporationOfPanaji, alt: "Corporation of Panaji" },
-  { image: sangli, alt: "Sangli" },
+  { image: nagpurNagarNigam, alt: "Nagpur Nagar Nigam", width: 100, height: 100 },
+  { image: corporationOfPanaji, alt: "Corporation of Panaji", width: 100, height: 100 },
+  { image: sangli, alt: "Sangli", width: 100, height: 100 },
   {
     image: shristiInfraEngineering,
-    alt: "Srishti Infra Engineering",
+    alt: "Srishti Infra Engineering", width: 100, height: 100
   },
   {
     image: silvassaMunicipalCouncil,
-    alt: "Silvassa Municipal Council",
+    alt: "Silvassa Municipal Council", width: 100, height: 100
   },
   {
     image: technocraftConstruction,
-    alt: "Technocraft Construction",
+    alt: "Technocraft Construction", width: 100, height: 100
   },
   {
     image: municipalCorporationUjjain,
-    alt: "Municipal Corporation Ujjain",
+    alt: "Municipal Corporation Ujjain", width: 100, height: 100
   },
   {
     image: vasaiVirarMunicipalCorporation,
-    alt: "Vasai Virar Municipal Corporation",
+    alt: "Vasai Virar Municipal Corporation", width: 100, height: 100
   },
   {
     image: thiruvananthapuramCorporation,
-    alt: "Corporation of Thiruvananthapuram",
+    alt: "Corporation of Thiruvananthapuram", width: 100, height: 100
   },
-  { image: cherthalaMunicipality, alt: "Municipal Council Cherthala" },
+  { image: cherthalaMunicipality, alt: "Municipal Council Cherthala", width: 100, height: 100 },
   {
     image: kannurMunicipalCorporation,
-    alt: "Municipal Corporation of Kannur",
+    alt: "Municipal Corporation of Kannur", width: 100, height: 100
   },
   {
     image: kozhikodeMunicipalCorporation,
-    alt: "Kozhikode Municipal Corporation",
+    alt: "Kozhikode Municipal Corporation", width: 100, height: 100
   },
   {
     image: municipalCorporationAurangabad,
-    alt: "Municipal Corporation Aurangabad",
+    alt: "Municipal Corporation Aurangabad", width: 100, height: 100
   },
-  { image: cmwssb, alt: "CMWSSB" },
+  { image: cmwssb, alt: "CMWSSB", width: 100, height: 100 },
   {
     image: gujaratUrbanDevelopmentMission,
-    alt: "Gujarat Urban Development Mission",
+    alt: "Gujarat Urban Development Mission", width: 100, height: 100
   },
-  { image: indahWater, alt: "Indah Water" },
+  { image: indahWater, alt: "Indah Water", width: 100, height: 100 },
 ];
 
 function Clients_Main() {
   return (
     <div>
-      <Clients clients={clientsData} />
+      <Clients clientsData={clientsData} />
     </div>
   );
 }

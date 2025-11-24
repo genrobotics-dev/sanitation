@@ -2,7 +2,7 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import HeroImg from "../../../public/assets/home_banner_image.webp";
-import HeroImg2 from "../../../public/assets/hero-image-2.webp";
+import HeroImg2 from "../../../public/assets/home_banner_tabimage.webp";
 import MobileImg from "../../../public/assets/home_banner_image_mobile.webp";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Image from "next/image";
@@ -34,7 +34,7 @@ function Hero1() {
           Innovating for Safer Cities,
            HealthierLives:<br />
           <span className="secondLine">
-            Compliance-Driven Robotics for a Cleaner Future.
+            Compliance-Driven Robotics for a Cleaner Future
           </span>
         </h1>
         <div className="sub-content">

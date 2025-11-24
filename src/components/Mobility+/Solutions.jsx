@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 // import banner from "@/assets/products/mobilityPlus/Mobility+ Seperate Units.jpg";
-import banner from "@/assets/products/mobilityPlus/solutions_image.webp";
+import banner from "@/assets/products/mobilityPlus/solution_image.webp";
 
 function Solutions() {
   return (

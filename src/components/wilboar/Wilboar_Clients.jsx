@@ -9,8 +9,8 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 const clients = [
-  { image: img1, alt: "Indah Water" },
   { image: img2, alt: "Municipal Committee of Leh (MCL)" },
+  { image: img1, alt: "Indah Water" },
   { image: img3, alt: "Thiruvananthapuram Airport" },
 ];
 
@@ -22,7 +22,6 @@ function Wilboar_Clients() {
     slidesToShow: 3,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false,
     pauseOnHover: true,
@@ -35,22 +34,24 @@ function Wilboar_Clients() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplaySpeed: 2000,
+          autoplay:true,
+          infinite:true,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
+          infinite:true
         },
       },
     ],

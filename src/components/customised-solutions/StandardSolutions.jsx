@@ -27,7 +27,7 @@ function StandardSolutions() {
   return (
     <section className="complex-risks_sec">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           {isTablet ? (
             // Tablet layout (heading → image → paragraph)
             <div className="flex flex-col items-center text-center">
@@ -95,9 +95,11 @@ function StandardSolutions() {
 
               <div className="col-lg-6 col-md-12 col-sm-12 mt-3 p-0">
                 <div className="why_bandicoot_content">
-                  <h1>When Standard Solutions Aren't Enough</h1>
-                  <span>Addressing Niche and Complex Requirements</span>
-                  <hr />
+                  <div className="hidden lg:block">
+                    <h1>When Standard Solutions Aren't Enough</h1>
+                    <span>Addressing Niche and Complex Requirements</span>
+                    <hr />
+                  </div>
                   <p>
                     Many industries face unique challenges that off-the-shelf
                     products cannot solve. These can range from operating in

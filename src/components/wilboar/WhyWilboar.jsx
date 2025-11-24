@@ -8,7 +8,7 @@ function WhyWilboar() {
   return (
     <section className="why_bandicoot_sec">
       <div className="container-fluid why_bandicoot_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="flex flex-col items-center text-center">
             <div className="lg:hidden why_bandicoot_content">
               <h1>

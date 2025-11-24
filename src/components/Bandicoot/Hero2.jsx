@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import HeroImg from "../../../public/assets/bandicoot_banner_image.webp";
+import HeroTabimg from "../../../public/assets/bandicoot_banner_tabimage.webp";
 import MobileImg from "@/assets/products/bandicoot/bandicoot_banner.webp"
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import bandicootLogo from "@/assets/products/bandicoot/Bandicoot-Logo.svg";
@@ -12,7 +13,7 @@ function Hero2() {
     <section className="main_hero">
       <picture>
         <source media="(max-width: 768px)" srcSet={MobileImg.src} />
-        {/* <source media="(max-width: 1024px)" srcSet={HeroImg2.src} /> */}
+        <source media="(min-width:768px) and (max-width: 1024px)" srcSet={HeroTabimg.src} /> 
         <source media="(min-width: 1025px)" srcSet={HeroImg.src} />
         <Image
           src={HeroImg}
@@ -37,7 +38,7 @@ function Hero2() {
         <h1 className="since-banner home" id="bandicoot_title">
           Engineered to Clean Any Type of Manhole, 
           <span className="secondLine break-line">
-          Ensuring Safety and Dignity for Sanitation Workers.
+          Ensuring Safety and Dignity for Sanitation Workers
           </span>
         </h1>
         <div className="sub-content">

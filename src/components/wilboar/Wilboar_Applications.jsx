@@ -29,7 +29,7 @@ function Wilboar_Applications() {
   return (
     <section className="wilBoarApplications_">
       <div className="container-fluid applications_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <h1>Application Across Different Horizontal Confined Spaces</h1>
           <br />
           <div className="row">

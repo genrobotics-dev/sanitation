@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeroImg from "../../../public/assets/digitalisation_banner_image.webp";
+import HeroImg from "../../../public/assets/digitalisation_hero_image.webp";
 import HeroImgTab from "../../../public/assets/digitalisation_service_tabimage.webp";
 import MobileImg from "@/assets/services/ugd-operations-digitalisation/ugd-service-banner.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";

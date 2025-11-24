@@ -9,7 +9,7 @@ function NationwideImpacts() {
   return (
     <section className="nationwide_impacts">
       <div className="container-fluid nationwide_impacts_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="header_title">
             <h1>Nationwide Impact & Milestones</h1>
             <p>
@@ -56,11 +56,10 @@ function NationwideImpacts() {
               <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
                 <div className="gray_card pt-4">
                   <div className="impact_content">
-                    <h2>Expanding Our Reach: Deployment in 100+ Cities</h2>
+                    <h2>Expanding Our Reach: Deployment in 120+ Cities</h2>
                     <p className="text-justify">
-                      Bandicoot robots are now operational in 100+ cities across 19 states and 3
-                      Union Territories, bringing safer sanitation
-                      practices and empowering local communities nationwide.
+                      Bandicoot Robots are now operational in 100+ cities across India, 
+                      bringing safer sanitation practices and empowering local communities nationwide.
                     </p>
                   </div>
                   <Image

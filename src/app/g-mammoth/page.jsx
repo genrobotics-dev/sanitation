@@ -51,7 +51,7 @@ function page() {
       <Hero4 />
       <WhyMammoth />
       <Mommoth_keyfeatures />
-      <Impact count={18} cols={3} stats={stats} /> 
+      <Impact count={18} cols={3} stats={stats} showROI={false}/> 
       <GmammothClients />
       <MakeInIndia
         image={makeInIndiaProd}

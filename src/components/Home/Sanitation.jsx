@@ -8,12 +8,12 @@ function Sanitation() {
   return (
     <section className="sanitation_sec">
       <div className="lg:container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="image_wrapper">
 
              <picture>
             <source media="(max-width: 768px)" srcSet={MobileAsset.src} />
-            <source media="(min-width: 769px) (max-width: 1024px)" srcSet={TabAsset.src} />
+            <source media="(min-width: 769px) and (max-width: 1024px)" srcSet={TabAsset.src} />
             <source media="(min-width: 1025px)" srcSet={Asset.src} />
             <Image
               src={Asset}

@@ -32,7 +32,7 @@ function ConsultingServices() {
   return (
     <section className="key_values_sec">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="key_values_title">
             <h1>
               The Genrobotics Advantage

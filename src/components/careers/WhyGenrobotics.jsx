@@ -11,7 +11,7 @@ function WhyGenrobotics() {
       <h1 className="title">Why Choose Genrobotics?</h1>
       <p className="subtitle">Innovate. Impact. Inspire.</p>
       <div className="container">
-        <div className="row px-[20px]">
+        <div className="row px-[5px]">
           <div className="col-lg-4 col-md-6 col-sm-12 cust_col">
             <div className="card whyCard">
               <Image

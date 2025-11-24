@@ -45,7 +45,7 @@ function AreasofExpertise() {
   return (
     <section className="areas_of_expertise_sec">
       <div className="container-fluid">
-        <div className="lg:px-[90]">
+        <div className="lg:px-[4rem]">
           <h1>Areas of Expertise</h1>
 
           <div className="content_sec">

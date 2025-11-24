@@ -1,0 +1,5 @@
+{
+  "repositoryName": "sanitation-tech",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}

@@ -35,7 +35,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: "Robotic Pit Cleaning",
+    title: " Bandicoot at IOCL  Refinery, Panipat",
     description:
       "IOCL required a robotic solution to clean OWS and SWS pits filled with highly viscous sludge, a by product of petroleum refining...",
     image: study3,
@@ -241,7 +241,7 @@ function CaseStudies() {
         </Modal.Body>
       </Modal>
       <div className="case-study-container md:container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="rob_pro_contents">
             <h1>Our Impact and Case Studies</h1>
             <p className="text-base">

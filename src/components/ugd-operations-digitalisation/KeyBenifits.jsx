@@ -69,7 +69,7 @@ function KeyBenifits() {
   return (
     <section className="key_benifits_sec">
       <div className="container-fluid" style={{ padding: "0 20px" }}>
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <h1>
             Key Benefits of a Digitalized <br /> Ecosystem
           </h1>

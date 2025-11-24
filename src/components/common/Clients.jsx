@@ -1,59 +1,16 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
 import Image from "next/image";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { CustomNextArrow, CustomPrevArrow } from "../CustomArrows";
+import Marquee from "react-fast-marquee";
 
-function Clients({ clients }) {
-  const isStatic = clients && clients.length <= 5;
-  const settings = {
-    dots: false,
-    infinite: !isStatic && clients.length > 5,
-    slidesToShow:  isStatic ? clients.length : 6,
-    autoplay: !isStatic,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    arrows: !isStatic,
-    pauseOnHover: !isStatic,
-    pauseOnFocus: !isStatic,
-    draggable: !isStatic,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: isStatic ? clients.length : 3,
-          slidesToScroll: isStatic ? clients.length : 3,
-          autoplaySpeed: 200,
-          infinite: !isStatic,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: isStatic ? clients.length : 2,
-          slidesToScroll: isStatic ? clients.length : 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: isStatic ? clients.length : 1,
-          slidesToScroll: isStatic ? clients.length : 1,
-        },
-      },
-    ],
-  };
+function Clients({ clientsData }) {
+  console.log(clientsData);
 
   return (
     <section className="clients_sec">
       <div
-        className={` clients-container ${
-          clients && clients.length > 5 ? "md:container-fluid" : "md:container"
-        } `}
+        className={` clients-container ${clientsData && clientsData.length > 5 ? "md:container-fluid" : "md:container"
+          } `}
       >
         <div className="headings_">
           <h1>Our Esteemed Clients</h1>
@@ -63,57 +20,22 @@ function Clients({ clients }) {
             operational goals.
           </p>
         </div>
-        <style jsx global>{`
-          @media screen and (max-width: 600px) {
-            /* Force height for all slides */
-            .clients_slick .slick-slide {
-              min-width: fit-content !important;
-              width: fit-content !important;
+        <div>
+          <Marquee>
+            {
+              clientsData && clientsData.map((item, idx) => (
+                <div key={idx} className="mx-8">
+                  <Image
+                    src={item.image?.src}
+                    alt={`item - ${idx}`}
+                    width={item.width}
+                    height={item.height}
+                    className="object-contain max-h-16 md:max-h-20 2xl:max-h-24"
+                  />
+                </div>
+              ))
             }
-            .slick-slide > div {
-              width: fit-content !important;
-            }
-          }
-        `}</style>
-        <div className="clients_slick">
-          <Slider {...settings}>
-            {clients &&
-              Array.isArray(clients) &&
-              clients.length !== 0 &&
-              clients.map((data, index1) => {
-                return (
-                  <div
-                    key={index1}
-                    className="client_slide"
-                    style={{
-                      width: "fit-content",
-                      display: "inline-block",
-                    }}
-                  >
-                    <div
-                      className="client_wrapper"
-                      style={{
-                        width: "fit-content",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div className="logo-box">
-                        <Image
-                          src={data?.image.src}
-                          width={0}
-                          height={0}
-                          alt={data?.alt}
-                          style={{ color: "transparent" }}
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-          </Slider>
+          </Marquee>
         </div>
       </div>
     </section>

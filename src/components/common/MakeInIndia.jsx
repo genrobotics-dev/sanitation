@@ -11,7 +11,7 @@ function MakeInIndia({ title, description, image, className = "" }) {
   return (
     <section className={`makeIn_india ${className}`}>
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="india_wrapper">
             <div className="row">
               <div className="col-lg-7 col-md-12 col-sm-12 mt-3">

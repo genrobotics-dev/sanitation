@@ -10,7 +10,7 @@ function UGDmanagement() {
   return (
     <section className="complex-risks_sec">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="flex flex-col items-center text-center">
             <div className="lg:hidden why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
               <h1>The Inefficiencies of Traditional UGD Management</h1>
@@ -33,14 +33,14 @@ function UGDmanagement() {
                 />
               </div>
               <div className="flex-1">
-                <div className="hidden lg:block why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
+                <div className="hidden lg:block why_bandicoot_content mb-6 w-full max-w-[900px] text-left">
                   <h1>The Inefficiencies of Traditional UGD Management</h1>
                   <span className="block text-gray-600">
                     Moving from Reactive Response to Proactive Management
                   </span>
                   <hr className="my-3 mx-auto w-[60%] border-gray-400" />
                 </div>
-                <div className="why_bandicoot_content max-w-[900px] text-justify">
+                <div className="why_bandicoot_content max-w-[900px] text-justify" id="UGD_para">
                   <p>
                     Traditional management of Underground Drainage (UGD) systems
                     relies heavily on manual record-keeping, guesswork, and

@@ -28,17 +28,15 @@ function OurStrength() {
     <section className="our_strength">
       <div className="container-fluid">
         <div className="padding_space" id="our_strength_pad">
-          {isTablet ? (
-            // ✅ Tablet layout (heading → image → paragraph)
-            <div className="flex flex-col items-center text-center">
-              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
-                <h1>Our Culture is Our Strength</h1>
-                <p className="block text-gray-600">
-                  Navigating Hazards and Regulations
-                </p>
-                <hr className="my-3 mx-auto w-[60%] border-gray-400" />
-              </div>
-
+          <div className="flex flex-col items-center text-center">
+            <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-center lg:hidden">
+              <h1>Our Culture is Our Strength</h1>
+              <p className="block text-gray-600" id="sub_title">
+                Navigating Hazards and Regulations
+              </p>
+              <hr className="my-3 mx-auto w-[60%] border-gray-400" />
+            </div>
+            <div className="lg:flex">
               <div className="bandicoot_image_wrapper mb-6">
                 <LazyLoadImage
                   src={image.src}
@@ -51,62 +49,21 @@ function OurStrength() {
                   }}
                 />
               </div>
-
-              <div className="why_bandicoot_content max-w-[900px] text-justify">
-                <p>
-                  We foster a culture rooted in innovation, collaboration, and
-                  purpose. Our diverse team of thinkers, creators, and problem
-                  solvers is united by a shared mission.
-                </p>
-                <ul className="list-disc list-inside mt-3 text-left">
-                  <li>
-                    <strong>Innovation-driven:</strong> We encourage curiosity
-                    and experimentation to find the best solutions.
-                  </li>
-                  <li>
-                    <strong>Purpose-led:</strong> Our social mission is at the
-                    heart of everything we do.
-                  </li>
-                  <li>
-                    <strong>Collaborative Spirit:</strong> We believe the best
-                    ideas emerge when we work together.
-                  </li>
-                  <li>
-                    <strong>Ownership & Accountability:</strong> We empower our
-                    team members to take ownership of their work.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          ) : (
-            // ✅ Default layout (desktop & mobile)
-            <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
-                <div className="bandicoot_image_wrapper">
-                  <LazyLoadImage
-                    src={image.src}
-                    width={0}
-                    height={0}
-                    alt="Our Culture image"
-                    effect="blur"
-                    wrapperProps={{
-                      style: { transitionDelay: "0.1s" },
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
-                <div className="why_bandicoot_content text-left">
+              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-left">
+                <div className="hidden lg:block">
                   <h1>Our Culture is Our Strength</h1>
-                  <p className="strength_subheading">Navigating Hazards and Regulations</p>
-                  <hr />
+                  <p className="block text-gray-600">
+                    Navigating Hazards and Regulations
+                  </p>
+                  <hr className="my-3 mx-auto w-[60%] border-gray-400" />
+                </div>
+                <div className="why_bandicoot_content max-w-[900px] text-justify">
                   <p>
                     We foster a culture rooted in innovation, collaboration, and
                     purpose. Our diverse team of thinkers, creators, and problem
                     solvers is united by a shared mission.
                   </p>
-                  <ul className="list-disc list-inside mt-3">
+                  <ul className="list-disc list-inside mt-3 text-left">
                     <li>
                       <strong>Innovation-driven:</strong> We encourage curiosity
                       and experimentation to find the best solutions.
@@ -127,7 +84,8 @@ function OurStrength() {
                 </div>
               </div>
             </div>
-          )}
+
+          </div>
         </div>
       </div>
     </section>

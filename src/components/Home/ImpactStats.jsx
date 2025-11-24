@@ -35,7 +35,7 @@ useEffect(() => {
   return (
     <section ref={ref} className="impact_sec">
       <div className="container-fluid impact_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="impact-stats">
             <h2 className="impact_title">Our Overall Impact Statistics</h2>
 

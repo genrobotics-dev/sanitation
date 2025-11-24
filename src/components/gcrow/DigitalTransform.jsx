@@ -4,7 +4,7 @@ function DigitalTransform() {
   return (
     <section className="DigitalTransform_">
       <div className="container-fluid">
-        <div className="lg:px-[90] ">
+        <div className="lg:px-[4rem] ">
           <h1>
             From Uncertainty to Accountability: The Digital Transformation
           </h1>

@@ -57,7 +57,7 @@ function Mommoth_keyfeatures() {
   return (
     <section className="key_features gmammoth_features features_container">
       <div className="container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="title_area">
             <div>
               <h1>Key Features</h1>

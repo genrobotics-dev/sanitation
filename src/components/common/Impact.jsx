@@ -3,7 +3,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-function Impact({ count, stats, cols }) {
+function Impact({ count, stats, cols, showROI }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -12,7 +12,7 @@ function Impact({ count, stats, cols }) {
   return (
     <section className="impact_sec impact_sec_bandicoot" ref={ref}>
       <div className="lg:container-fluid w-full">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="impact-stats bandicoot_impact">
             <h1>Impact That Matters</h1>
             <div
@@ -44,11 +44,15 @@ function Impact({ count, stats, cols }) {
                   );
                 })}
             </div>
-
-            <p className="btm_text">
-              Return on investment (ROI) IN {count ?? 32} Months
-            </p>
-            <p className="condition_based">under optimum conditions*</p>
+          {
+            showROI && 
+            <>
+                <p className="btm_text">
+                  Return on investment (ROI) IN {count ?? 32} Months
+                </p>
+                <p className="condition_based">under optimum conditions*</p>
+            </>
+            }  
           </div>
         </div>
       </div>

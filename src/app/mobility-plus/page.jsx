@@ -43,7 +43,7 @@ function page() {
       <Usage />
       <Highlights />
       <HowMobilityWorks />
-      <IndustryApplications product="Bandicoot Mobility Plus" />
+      <IndustryApplications product="Bandicoot Mobility+" />
       <Mobility_impacts />
       <MobilityUpdates />
       <Recognitions />

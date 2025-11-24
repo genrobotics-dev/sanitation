@@ -6,9 +6,13 @@ function MissionRobo() {
   return (
     <section className="robo_hole">
       <div className="container">
-        {/* --- Default layout (desktop & mobile) --- */}
         <div className="row normal_layout">
+          <div className="title_ lg:hidden">
+              <h1>#MissionRobohole</h1>
+              <p>Transforming Manholes to Roboholes</p>
+            </div>
           <div className="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center">
+
             <Image
               src={mission}
               alt="Mission Robo hole"
@@ -19,7 +23,7 @@ function MissionRobo() {
           </div>
 
           <div className="col-lg-7 col-md-12 col-sm-12 mt-4">
-            <div className="title_">
+            <div className="title_ hidden lg:block">
               <h1>#MissionRobohole</h1>
               <p>Transforming Manholes to Roboholes</p>
             </div>

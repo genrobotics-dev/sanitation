@@ -90,7 +90,7 @@ function MobilityKeyFeatures() {
   return (
     <section className="key_features" id="mobility_key_features">
       <div className="md:container-fluid features_container">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="title_area">
             <div>
               <h1>Key Features</h1>

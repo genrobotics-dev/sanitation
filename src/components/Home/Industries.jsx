@@ -39,28 +39,30 @@ function Industries() {
   return (
     <section className="industries_sec">
       <div className="container-fluid">
-        <h1 className="title__">Industries We Serve</h1>
-<br />
-        <div className="row wrapper_">
-          {caseStudyImages.map((data, index7) => {
-            return (
-              <div
-                className="col-lg-2 col-md-4 col-6 mb-4"
-                key={index7}
+        <div className="lg:px-[4rem]">
+          <h1 className="title__">Industries We Serve</h1>
+          <br />
+          <div className="row wrapper_">
+            {caseStudyImages.map((data, index7) => {
+              return (
+                <div
+                  className="col-lg-2 col-md-4 col-6 mb-4"
+                  key={index7}
                 // 'col-6' gives 2 per row on mobile with Bootstrap
-              >
-                <div className="image_wrapper">
-                  <Image
-                    src={data?.image}
-                    alt={data?.alt}
-                    width={0}
-                    height={0}
-                  />
+                >
+                  <div className="image_wrapper">
+                    <Image
+                      src={data?.image}
+                      alt={data?.alt}
+                      width={0}
+                      height={0}
+                    />
+                  </div>
+                  <p>{data?.alt}</p>
                 </div>
-                <p>{data?.alt}</p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

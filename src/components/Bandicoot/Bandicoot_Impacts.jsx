@@ -16,7 +16,7 @@ function Bandicoot_Impacts() {
       value: 62,
     },
   ];
-  return <Impact cols={3} count={18} stats={stats}/>;
+  return <Impact cols={3} count={18} stats={stats} showROI={true}/>;
 }
 
 export default Bandicoot_Impacts;

@@ -39,7 +39,7 @@ function IndustryApplications({ product }) {
   return (
     <section className="industry_apps">
       <div className="container-fluid industry_container">
-        <div className="lg:px-[2rem] ">
+        <div className="lg:px-[4rem] ">
           <h1 className="title__">Diverse Applications Across Industries</h1>
           <p className="sub__title">
             {product ?? ""}'s versatile design makes it suitable for a wide

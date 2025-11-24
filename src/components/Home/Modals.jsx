@@ -47,7 +47,7 @@ function Modals() {
   return (
     <section className="modals_sec">
       <div className="modals_container md:container-fluid">
-        <div className="lg:px-[2rem]">
+        <div className="lg:px-[4rem]">
           <div className="rob_pro_contents">
             <h1>Our Flexible Engagement Models</h1>
             <p>
@@ -56,13 +56,14 @@ function Modals() {
               robotic solutions and achieve regulatory compliance seamlessly.
             </p>
           </div>
-          <div className="row">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
             {engagementModels.map((item, index2) => {
               return (
-                <div className="col-lg-6 col-2xl-3 col-md-12 col-sm-12 mt-3" key={index2}>
+                <div className="" key={index2}>
                   <div className="card engagementCard">
                     <div className="title_wrapper">
                       <h1>{item?.model}</h1>
+                      <div className="logo_title">
                       <Image
                         src={item?.icons}
                         alt={`modal icon ${index2}`}
@@ -71,6 +72,7 @@ function Modals() {
                         className="modal_icons"
                       />
                       <h2>{item?.title}</h2>
+                      </div>
                     </div>
 
                     <p>{item?.description}</p>

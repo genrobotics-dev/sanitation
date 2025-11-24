@@ -4,14 +4,14 @@ import Slider from "react-slick";
 
 import img1 from "@/assets/awards/forbes_30_under_30.webp";
 import img2 from "@/assets/awards/ai_gamechangers_award.webp";
-import img3 from "@/assets/awards/swachhta_startup_challenge.webp";
+import img3 from "@/assets/awards/swachhata_startup_challenge.webp";
 import img4 from "@/assets/awards/young_changemaker_award.webp";
 import img5 from "@/assets/awards/infosys_aarohan_social_innovation_award.webp";
 import img6 from "@/assets/awards/amrut_technology_award.webp";
 import img7 from "@/assets/awards/birac_social_impact_award.webp";
-import img8 from "@/assets/awards/startup_india_certificate.webp";
-import img11 from "@/assets/awards/pride_of_kerala_award.webp";
-import img12 from "@/assets/awards/the_level_next_award.webp";
+import img8 from "@/assets/awards/national_startup_award.webp";
+import img11 from "@/assets/awards/pride_of_kerala.webp";
+import img12 from "@/assets/awards/level_next_award.webp";
 import img13 from "@/assets/awards/ficci_award_2019.webp";
 import img14 from "@/assets/awards/asia_inspiration_award.webp";
 import img15 from "@/assets/awards/anjali_mashelkar_inclusive_innovation_award.webp";
@@ -22,80 +22,81 @@ import { CustomNextArrow, CustomPrevArrow } from "../CustomArrows";
 const awards = [
   {
     img: img2,
-    title: "Ranked in Top 3 AI Startup by MeitY",
-    subtitle: "For innovation in environmental robotics",
+    title: "Recognized by MeitY as One of India’s Top 3 AI Startups",
+    subtitle: "Celebrating our transformative impact on global urban sanitation.",
   },
   {
     img: img1,
-    title: "Forbes 30 Under 30",
-    subtitle: "Recognizing our visionary leadership",
+    title: "Forbes 30 Under 30 Asia Recognition",
+    subtitle: "For Bandicoot, transforming sanitation practices in India.",
   },
   {
     img: img3,
-    title: "SWACHHATA STARTUP CHALLENGE",
-    subtitle: "For innovation in environmental robotics.",
+    title: "Awarded the Swachhata Startup Challenge, by the Government of India",
+    subtitle: "Recognized for pioneering achievements in robotics automation.",
   },
   {
     img: img4,
-    title: "Awarded for Driving Change in Urban Sanitation",
-    subtitle: "Honored by Former Vice President Shri Venkaiah Naidu with the Young Changemaker Award 2020 for our contribution to safe sanitation through Bandicoot",
+    title: "Young Changemaker Honour from The Hindu BusinessLine",
+    subtitle: "For inventing Bandicoot, the world’s first robotic scavenger.",
   },
   {
     img: img5,
-    title: "INFOSYS AAROHAN SOCIAL INNOVATION AWARD",
-    subtitle: "For the Revolutionary Product Bandicoot",
+    title: "Infosys Aarohan Award for Excellence in Social Innovation",
+    subtitle: "For the revolutionary Bandicoot robot, eliminating manual scavenging.",
   },
   {
     img: img6,
-    title: "AMRUT Tech Challenge Award 2020",
+    title: "Recipient of the AMRUT Tech Challenge Award",
     subtitle:
-      "Recognized by the Ministry of Housing and Urban Affairs for Bandicoot, a breakthrough solution to end manual sewer cleaning.",
+      "Recognized for Bandicoot’s innovative solution in sewer cleaning safety.",
   },
   {
     img: img7,
-    title: "BIRAC Social Impact Award 2024",
+    title: "BIRAC Distinction in High-Impact Social Innovation",
     subtitle:
-      "Presented by the Ministry of Science & Technology for the impactful innovations Bandicoot and Mobility+, eliminating manual scavenging and uplifting sanitation workers.",
+      "For Bandicoot & Bandicoot Mobility+ improving worker safety and sanitation",
   },
   {
     img: img8,
-    title: "Honored with the National Startup Award 2020",
+    title: "National Startup Award for the Best Campus-Initiated Startup",
     subtitle:
-      "Awarded in the ‘Campus-Initiated Startups’ category by the Ministry of Commerce and Industry, for Bandicoot — the world’s first robot designed to eliminate human entry into sewers.",
+      "For Bandicoot, the world’s first manhole-cleaning robot."
   },
   // {
   //   img: img9,
-  //   title: "Young Changemaker Award 2020",
+  //   title: "Economic Times Distinction in Social Enterprise Innovation",
   //   subtitle: "For Promising Innovative Solution",
   // },
   {
+
     img: img11,
-    title: "From Kerala, for the world",
-    subtitle: "We’re proud to be honored with the ‘Pride of Kerala’ award — the state’s highest startup recognition — by the Kerala Startup Mission at Huddle Global 2022. Presented by CM Shri Pinarayi Vijayan.",
+    title: "Pride of Kerala Award By the Govt of Kerala",
+    subtitle: "Recognized by Kerala Startup Mission for Bandicoot’s impact.",
   },
   {
     img: img12,
-    title: "The Level Next Award",
+    title: "Level Next Award – India Scale-Up Program",
     subtitle:
-      "Innovation is just the beginning — scaling impact is the mission. Grateful to receive the Level Next Award, honoring Genrobotics as one of India’s top scale-up champions.",
+      "For demonstrating scalable, impactful innovation in robotics.",
   },
   {
     img: img13,
-    title: "FICCI Best Corporate Initiative Award",
+    title: "ISC FICCI Honour for Outstanding Corporate Initiative",
     subtitle:
-      "Our mission to end manual scavenging and modernize sanitation earned national recognition, with the FICCI Best Corporate Initiative Award 2019 at the India Sanitation Coalition.",
+       "For Bandicoot’s innovative approach to improving urban hygiene.",
   },
   {
     img: img14,
-    title: "Asia Inspiration Award",
+    title: "Asia Inspiration Award for Outstanding Contributions to Sanitation",
     subtitle:
-      "Grateful to IYC for honoring our work in transforming sanitation and replacing manual scavenging with dignity and technology.",
+      "For Bandicoot, providing a sustainable alternative to manual scavenging.",
   },
   {
     img: img15,
-    title: "Innovation with purpose gets honored",
+    title: "Anjani Mashelkar Award for Excellence in Inclusive Innovation",
     subtitle:
-      "Thank you, Dr. R.A. Mashelkar and NSIC, for awarding us the Anjani Mashelkar Inclusive Innovation Award 2019 — for Bandicoot and the movement to end manual scavenging.",
+      "For Bandicoot, pioneering robotics solutions with high social impact.",
   },
 ];
 
@@ -119,7 +120,7 @@ function Awards() {
     slidesToShow: 3,
     arrows: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     afterChange: (current) => {
       setActiveSliderIndex(current);
@@ -154,7 +155,7 @@ function Awards() {
   return (
     <section className="recognitions_sec">
       <div className="container-fluid awards_container">
-        <div className="lg:px-[2rem] ">
+        <div className="lg:px-[4rem] ">
           <div className="rec_wrapper">
             <h1 className="title">Awards & Recognitions</h1>
             <p className="subtitle">

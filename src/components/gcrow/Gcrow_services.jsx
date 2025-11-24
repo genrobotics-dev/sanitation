@@ -33,8 +33,8 @@ function Gcrow_services() {
   return (
     <Services
       benefits={benefits}
-      title="Our Services"
-      description="Genrobotics provides comprehensive services to help organizations and government bodies implement advanced robotic solutions for urban sanitation and confined space management, ensuring compliance and operational excellence."
+      title="The G Crow Advantage"
+      description="From dashboards to drains, G Crow gives sanitation a digital command center."
       className="gcrow_services"
     />
   );
