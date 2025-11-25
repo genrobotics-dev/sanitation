@@ -9,6 +9,8 @@ import feature4 from "@/assets/products/wilboar/features/heavy_duty_manoeuvrabil
 import feature5 from "@/assets/products/wilboar/features/IP68_night_vision_cameras_lights.webp";
 import feature6 from "@/assets/products/wilboar/features/deployment_system.webp";
 import feature7 from "@/assets/products/wilboar/features/integrated_sludge_suction_module.webp";
+import feature8 from "@/assets/products/wilboar/features/customizable.webp";
+
 import KeyFeatures from "../common/KeyFeatures";
 
 const features = [
@@ -53,6 +55,12 @@ const features = [
     description:
       "Powerful suction system safely removes and transports slurry and hazardous waste.",
     image: feature7,
+  },
+  {
+    title: "Default Size <br /> Configuration",
+    description:
+      "660 mm width, 560 mm H, 1200 mm L Standard Dimensions (customizable)",
+    image: feature8,
   },
 ];
 

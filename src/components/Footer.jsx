@@ -16,28 +16,34 @@ const Footer = () => {
           </div>
           <div className="social_icons">
             <a href="https://x.com/GenRobotic"
-               aria-label="Twitter"
-               aria-labelledby="Genrobotics Twitter page"
-               aria-describedby="Opening on a new Window">
+              aria-label="Twitter"
+              aria-labelledby="Genrobotics Twitter page"
+              aria-describedby="Opening on a new Window">
               <Fa6.FaXTwitter />
             </a>
             <a href="https://www.facebook.com/genrobotic"
-               aria-label="Facebook"
-               aria-labelledby="Genrobotics Facebook page"
-               aria-describedby="Opening on a new Window">
+              aria-label="Facebook"
+              aria-labelledby="Genrobotics Facebook page"
+              aria-describedby="Opening on a new Window">
               <Fa6.FaFacebookF />
             </a>
             <a href="https://www.instagram.com/genroboticinnovations/"
-               aria-label="Instagram"
-               aria-labelledby="Genrobotics Instagram page"
-               aria-describedby="Opening on a new Window">
+              aria-label="Instagram"
+              aria-labelledby="Genrobotics Instagram page"
+              aria-describedby="Opening on a new Window">
               <Bi.BiLogoInstagramAlt />
             </a>
             <a href="https://www.linkedin.com/company/13393278/admin/dashboard/"
-               aria-label="LinkedIn"
-               aria-labelledby="Genrobotics LinkedIn page"
-               aria-describedby="Opening on a new Window">
+              aria-label="LinkedIn"
+              aria-labelledby="Genrobotics LinkedIn page"
+              aria-describedby="Opening on a new Window">
               <Fa6.FaLinkedinIn />
+            </a>
+            <a href="https://www.youtube.com/@genroboticinnovations"
+              aria-label="Youtube"
+              aria-labelledby="Genrobotics youtube page"
+              aria-describedby="Opening on a new Window">
+              <Bi.BiLogoYoutube />
             </a>
           </div>
         </div>
@@ -67,35 +73,35 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex md:hidden gap-4">
-            <a href="https://x.com/GenRobotic"
+          <a href="https://x.com/GenRobotic"
             className="inline-flex w-9 h-9 bg-[#2b2b2b] text-white rounded-full justify-center items-center"
-               aria-label="Twitter"
-               aria-labelledby="Genrobotics Twitter page"
-               aria-describedby="Opening on a new Window">
-              <Fa6.FaXTwitter />
-            </a>
-            <a href="https://www.facebook.com/genrobotic"
+            aria-label="Twitter"
+            aria-labelledby="Genrobotics Twitter page"
+            aria-describedby="Opening on a new Window">
+            <Fa6.FaXTwitter />
+          </a>
+          <a href="https://www.facebook.com/genrobotic"
             className="inline-flex w-9 h-9 bg-[#2b2b2b] text-white rounded-full justify-center items-center"
-               aria-label="Facebook"
-               aria-labelledby="Genrobotics Facebook page"
-               aria-describedby="Opening on a new Window">
-              <Fa6.FaFacebookF />
-            </a>
-            <a href="https://www.instagram.com/genroboticinnovations/"
+            aria-label="Facebook"
+            aria-labelledby="Genrobotics Facebook page"
+            aria-describedby="Opening on a new Window">
+            <Fa6.FaFacebookF />
+          </a>
+          <a href="https://www.instagram.com/genroboticinnovations/"
             className="inline-flex w-9 h-9 bg-[#2b2b2b] text-white rounded-full justify-center items-center"
-               aria-label="Instagram"
-               aria-labelledby="Genrobotics Instagram page"
-               aria-describedby="Opening on a new Window">
-              <Bi.BiLogoInstagramAlt />
-            </a>
-            <a href="https://www.linkedin.com/company/13393278/admin/dashboard/"
+            aria-label="Instagram"
+            aria-labelledby="Genrobotics Instagram page"
+            aria-describedby="Opening on a new Window">
+            <Bi.BiLogoInstagramAlt />
+          </a>
+          <a href="https://www.linkedin.com/company/13393278/admin/dashboard/"
             className="inline-flex w-9 h-9 bg-[#2b2b2b] text-white rounded-full justify-center items-center"
-               aria-label="LinkedIn"
-               aria-labelledby="Genrobotics LinkedIn page"
-               aria-describedby="Opening on a new Window">
-              <Fa6.FaLinkedinIn />
-            </a>
-          </div>
+            aria-label="LinkedIn"
+            aria-labelledby="Genrobotics LinkedIn page"
+            aria-describedby="Opening on a new Window">
+            <Fa6.FaLinkedinIn />
+          </a>
+        </div>
       </div>
     </footer>
   );

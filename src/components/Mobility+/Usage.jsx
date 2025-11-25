@@ -1,6 +1,6 @@
 import React from "react";
 
-import simple from "@/assets/products/mobilityPlus/useage/simplified_logistics.webp";
+import simple from "@/assets/products/mobilityPlus/useage/enhanced_convenience.webp";
 import faster from "@/assets/products/mobilityPlus/useage/faster_operations.webp";
 import detachable from "@/assets/products/mobilityPlus/features/detatchable_bandicoot_unit.webp";
 import Image from "next/image";

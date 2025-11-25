@@ -9,17 +9,17 @@ import img6 from "@/assets/clients/kerala_water_authority.webp";
 import img7 from "@/assets/clients/thiruvananthapuram_corporation.webp";
 
 const clientData = [
-  { image: img3, alt: "Cherthala Municipality" },
-  { image: img4, alt: "Kannur Municipal Corporation" },
-  { image: img5, alt: "kozhikode Municipal corporation" },
-  { image: img6, alt: "Kerala Wanter Authority Kochi" },
-  { image: img7, alt: "Trivandrum Municipal corporation" },
-  ];
+  { image: img3, alt: "Cherthala Municipality", width: 150, height: 150 },
+  { image: img4, alt: "Kannur Municipal Corporation", width: 150, height: 150 },
+  { image: img5, alt: "kozhikode Municipal corporation", width: 150, height: 150 },
+  { image: img6, alt: "Kerala Wanter Authority Kochi", width: 150, height: 150 },
+  { image: img7, alt: "Trivandrum Municipal corporation", width: 150, height: 150 },
+];
 
 function GmammothClients() {
   return (
     <div>
-      <Clients clients={clientData} />
+      <Clients clientsData={clientData} />
     </div>
   );
 }

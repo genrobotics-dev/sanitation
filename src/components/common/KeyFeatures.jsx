@@ -2,17 +2,17 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-function KeyFeatures({ featuresData, title, subTitle, className=""}) {
-    const [showAll, setShowAll] = useState(false);
-  
-    const displayedFeatures = showAll
-      ? featuresData
-      : featuresData.slice(0, 4);
-      console.log(displayedFeatures);
-      
+function KeyFeatures({ featuresData, title, subTitle, className = "" }) {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedFeatures = showAll
+    ? featuresData
+    : featuresData.slice(0, 4);
+  console.log(displayedFeatures);
+
 
   return (
-    <section className={`key_features md:${className || ""}`}  id="key_features">
+    <section className={`key_features md:${className || ""}`} id="key_features">
       <div className="lg:container-fluid feature_container">
         <div>
           <div className="title_area">
@@ -56,20 +56,20 @@ function KeyFeatures({ featuresData, title, subTitle, className=""}) {
                   ))}
               </div>
               {featuresData.length > 4 && (
-              <div className="text-center mt-4">
-                <button
-                  onClick={() => setShowAll(!showAll)}
-                  className="show_more_btn"
-                >
-                  {showAll ? "Show Less" : "Show More"}
-                </button>
-              </div>
-            )}
+                <div className="text-center mt-4">
+                  <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="show_more_btn"
+                  >
+                    {showAll ? "Show Less" : "Show More"}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </div >
+      </div >
+    </section >
   );
 }
 

@@ -16,15 +16,15 @@ import Clients from "@/components/common/Clients";
 import FAQ from "@/components/Bandicoot/FAQ";
 import BandicootForm from "@/components/Bandicoot/BandicootForm";
 
-import feature1 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_1.webp";
+import feature1 from "@/assets/products/bandicoot/features/robotic_arm.webp";
 import feature2 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_2.webp";
 import feature3 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_3.webp";
-import feature4 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_4.webp";
-import feature5 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_5.webp";
-import feature6 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_6.webp";
-import feature7 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_7.webp";
-import feature8 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_8.webp";
-import feature9 from "@/assets/products/bandicoot/features/bandicoot_keyfeature_9.webp";
+import feature4 from "@/assets/products/bandicoot/features/specially_designed_bucket.webp";
+import feature5 from "@/assets/products/bandicoot/features/ip68_waterproof_design.webp";
+import feature6 from "@/assets/products/bandicoot/features/cameras_and_gassensing.webp";
+import feature7 from "@/assets/products/bandicoot/features/operational_assistand_ui.webp";
+import feature8 from "@/assets/products/bandicoot/features/compact_and agile.webp";
+import feature9 from "@/assets/products/bandicoot/features/optimized_for_industrial_versatility.webp";
 
 import TrustUs from "@/components/Bandicoot/TrustUs";
 import { createMetadata } from "@/utils/seo";

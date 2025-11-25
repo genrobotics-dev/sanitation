@@ -8,8 +8,8 @@ import rec4 from "@/assets/products/bandicoot/recognitions/amrut_certification.w
 import rec5 from "@/assets/products/bandicoot/recognitions/ersu_listing.webp";
 import rec6 from "@/assets/products/bandicoot/recognitions/nskfdc.webp";
 import rec7 from "@/assets/products/bandicoot/recognitions/swachhata_startup_challenge.webp";
-import rec8 from"@/assets/products/bandicoot/recognitions/ministry_of_social_justice_and_empowerment.webp";
-import rec9 from"@/assets/products/bandicoot/recognitions/national_commission_for_safai_karamcharis.webp";
+import rec8 from "@/assets/products/bandicoot/recognitions/ministry_of_social_justice_and_empowerment.webp";
+import rec9 from "@/assets/products/bandicoot/recognitions/national_commission_for_safai_karamcharis.webp";
 
 import Image from "next/image";
 
@@ -81,7 +81,7 @@ function Recognitions() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: true,
@@ -144,12 +144,10 @@ function Recognitions() {
                       />
                     </div>
                     <div className="product_content">
-                      <div>
-                        <h2>{product?.title}</h2>
-                        <div className="description_wrapper">
-                          <p>{product?.description}</p>
-                        </div>
-                      </div>
+                      <h2>{product?.title}</h2>
+                    </div>
+                    <div className="description_wrapper">
+                      <p>{product?.description}</p>
                     </div>
                   </div>
                 );

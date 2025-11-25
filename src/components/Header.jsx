@@ -365,7 +365,33 @@ function Header() {
             </Link>
           </div>
         </div>
-
+        <div className="menu_drop_down">
+          <p
+            className={
+              resourcesPaths.includes(pathname)
+                ? "menu_item mb-0 active"
+                : "menu_item mb-0"
+            }
+            aria-current={resourcesPaths.includes(pathname) ? "page" : undefined}
+            href="/resources"
+          >
+            Resources
+          </p>
+          <ul className="dropdown_menu">
+            <li
+              className={
+                pathname === "/blogs" ? "sub_active" : ""
+              }
+            >
+              <a href="/blogs">
+                Blogs
+              </a>
+            </li>
+            {/* <li className={pathname === "/news-&-articles" ? "sub_active" : ""}>
+                    <a href="/news">News & Articles</a>
+                  </li> */}
+          </ul>
+        </div>
         {/* <a
           className={pathname === "/blog" ? "activePath" : ""}
           href="/blog"

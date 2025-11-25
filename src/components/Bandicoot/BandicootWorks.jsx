@@ -75,7 +75,7 @@ function BandicootWorks() {
                     height="643"
                     src="https://www.youtube.com/embed/1WGHd92axqE?si=7jZLGD78jrxhqg7l"
                     title="BANDICOOT MINI WORKING VIDEO"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
@@ -98,9 +98,8 @@ function BandicootWorks() {
                   {robotOperationSteps.map((step, index) => (
                     <div
                       key={index}
-                      className={`works_accordion_item ${
-                        activeIndex === index ? "active" : ""
-                      }`}
+                      className={`works_accordion_item ${activeIndex === index ? "active" : ""
+                        }`}
                     >
                       <div
                         className="works_accordion_header"

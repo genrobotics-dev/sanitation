@@ -1,5 +1,5 @@
 "use client"
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 import headset from "@/assets/products/gcrow/icons/headset.svg";
 import gps from "@/assets/products/gcrow/icons/gps.svg";

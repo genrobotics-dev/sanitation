@@ -2,7 +2,7 @@ import React from "react";
 
 import Img1 from "@/assets/products/bandicoot/modi_with_bandicoot1.webp";
 import Img2 from "@/assets/products/bandicoot/modi_with_bandicoot2.webp";
-import bandicootIndia from "@/assets/products/bandicoot/bandicoot_india.webp";
+import bandicootIndia from "@/assets/products/bandicoot/bandicoot_india_map.webp";
 import Image from "next/image";
 
 function NationwideImpacts() {

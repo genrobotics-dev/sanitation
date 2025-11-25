@@ -50,7 +50,7 @@ const testimonialsData = [
     name: "Mr. Anand Mahindra",
     designation: "Chairman, Mahindra Group",
     quote:
-      "There are many who worry about robots 'dehumanising' the society. This is one area in which I believe they will do precisely the opposite. We need more of these.",
+      "Enough of this debasement of human life. I had tweeted about an automated scavenging machine-the Bandicoot-developed by young students. We need more Bandicoots.",
     image: anandMahindra,
   },
 
@@ -129,7 +129,7 @@ function Testimonials() {
                     <div className="testimonial-content">
 
                       <div className="wrapper__">
-                      <div className="quote-mark"></div>
+                        <div className="quote-mark"></div>
                         <p className="description">{`“${data?.quote}”`}</p>
                         <br />
                         <hr />

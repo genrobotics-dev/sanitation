@@ -180,7 +180,7 @@ function CaseStudies() {
   };
 
   return (
-   <section className="case_studies" id="caseStudies">
+    <section className="case_studies" id="caseStudies">
       <Modal show={showModal} onHide={handleHideModal}>
         <Modal.Header closeButton>
           <Modal.Title>{showCaseStudies?.title}</Modal.Title>
@@ -196,7 +196,7 @@ function CaseStudies() {
               </label>
               <input
                 type="text"
-                className="form-control"    
+                className="form-control"
                 name="fullName"
                 id="fullName"
                 value={userDetails?.fullName}
@@ -310,7 +310,7 @@ function CaseStudies() {
                       style={{
                         fontSize: "18px",
                         lineHeight: "1.3",
-                        textAlign:"left",
+                        textAlign: "left",
                         flexGrow: 1,
                       }}
                     >

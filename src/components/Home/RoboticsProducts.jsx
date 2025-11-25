@@ -9,7 +9,7 @@ import bandicoot from "@/assets/product-logos/product_bandicoot.webp";
 import bandicootTitle from "@/assets/product-logos/Bandicoot.webp";
 import wilboar from "@/assets/product-logos/product_wilboar.webp";
 import wilboarTitle from "@/assets/product-logos/Wilboar.webp";
-import gmammoth from "@/assets/product-logos/product_mammoth.webp";
+import gmammoth from "@/assets/product-logos/product_gmammoth.webp";
 import gmammothTitle from "@/assets/product-logos/Mammoth.webp";
 import gCrowTitle from "@/assets/product-logos/gcrow_logo.webp";
 import gCrow from "@/assets/product-logos/product_gcrow.webp";
@@ -84,7 +84,7 @@ function RoboticsProducts() {
   const router = useRouter();
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0,
   });
 
   const settings = {
@@ -92,9 +92,12 @@ function RoboticsProducts() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: inView,
     speed: 2000,
     autoplaySpeed: 4000,
+    pauseOnHover: false,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     responsive: [
@@ -148,7 +151,7 @@ function RoboticsProducts() {
           </div>
 
           <div className="robo_card_wrapper ">
-          <style jsx global>{`
+            <style jsx global>{`
                   @media screen and (max-width: 600px) {
                   /* Force height for all slides */
                   .slick-slide .robo_prod_card{
@@ -167,7 +170,7 @@ function RoboticsProducts() {
                     margin-right: -16px; /* to avoid overflow and keep items aligned */
                   }
                 `}</style>
-            <Slider {...settings}>
+            <Slider key={inView ? 'slider-active' : 'slider-inactive'} {...settings}>
               {products.map((product, index) => {
                 return (
                   <div key={index}>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 function Clients({ clientsData }) {
-  console.log(clientsData);
 
   return (
     <section className="clients_sec">
@@ -21,7 +20,7 @@ function Clients({ clientsData }) {
           </p>
         </div>
         <div>
-          <Marquee>
+          <Marquee autoFill={true}>
             {
               clientsData && clientsData.map((item, idx) => (
                 <div key={idx} className="mx-8">

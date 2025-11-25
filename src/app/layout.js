@@ -17,7 +17,10 @@ export const metaData = {
     "Genrobotics’ sanitation robot automates sewer and drain cleaning, ensuring safer, smarter, and more efficient sanitation solutions. Book your demo today.",
   keywords:
     "Genrobotics, Bandicoot, Robotics, Sanitation, Innovation, manhole cleaning robot, sewer cleaning robot, sewer jetting machine",
-  url: "https://sanitation.genrobotics.com/"
+  url: "https://sanitation.genrobotics.com/",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({ children }) {
@@ -26,12 +29,12 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
+        <link rel="icon" href="favicon.ico" sizes="any" />
         <link
           href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
           rel="stylesheet"
         />
-       <Script
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-E5S92WX53T"
           strategy="afterInteractive"
         />
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={`antialiased`}>
-       {/* <SplashScreen />*/}
+        {/* <SplashScreen />*/}
         <NavigationProvider>
           <GlobalLoader />
           <Header />
