@@ -1,7 +1,6 @@
 "use client"
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import bandicootImg from "@/assets/products/bandicoot/why_bandicoot_image.webp";
+import Image from "next/image";
 
 function WhyBandicoot() {
   return (
@@ -14,17 +13,13 @@ function WhyBandicoot() {
               <span>A Leap Towards Safer & Smarter Sanitation</span>
               <hr />
             </div>
-            <div className="lg:flex">
+            <div className="lg:flex lg:w-full 5xl:w-3/4">
               <div className="bandicoot_image_wrapper mb-6 lg:flex-1">
-                <LazyLoadImage
+                <Image
                   src={bandicootImg.src}
                   width={0}
                   height={0}
                   alt="Bandicoot product image"
-                  effect="blur"
-                  wrapperProps={{
-                    style: { transitionDelay: "0.1s" },
-                  }}
                 />
               </div>
 

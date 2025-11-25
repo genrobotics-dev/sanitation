@@ -206,9 +206,9 @@ function Header() {
                       Blogs
                     </a>
                   </li>
-                  <li className={pathname === "/news-&-articles" ? "sub_active" : ""}>
+                  {/* <li className={pathname === "/news-&-articles" ? "sub_active" : ""}>
                     <a href="/news">News & Articles</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/* <Link

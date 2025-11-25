@@ -2,6 +2,7 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import bg from "@/assets/products/gmammoth/why_gmammoth.webp";
+import Image from "next/image";
 
 function WhyMammoth() {
   return (
@@ -14,9 +15,9 @@ function WhyMammoth() {
               <span className="mammoth_subtitle">One Machine, Four Powerful Solutions</span>
               <hr />
             </div>
-            <div className="lg:flex">
+            <div className="lg:flex lg:w-full">
               <div className="bandicoot_image_wrapper mb-6 lg:flex-1">
-                <LazyLoadImage
+                <Image
                   src={bg.src}
                   width={0}
                   height={0}

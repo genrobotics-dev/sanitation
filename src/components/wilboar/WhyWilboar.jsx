@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import wilboarImg from "@/assets/products/wilboar/wilboar_in_leh.webp";
+import Image from "next/image";
 
 function WhyWilboar() {
   return (
@@ -17,9 +18,9 @@ function WhyWilboar() {
               <p>A Leap Towards Safer & Smarter Sanitation</p>
               <hr />
             </div>
-            <div className="lg:flex">
+            <div className="lg:flex lg:w-full">
               <div className="bandicoot_image_wrapper mb-6 lg:flex-1">
-                <LazyLoadImage
+                <Image
                   src={wilboarImg.src}
                   width={0}
                   height={0}
