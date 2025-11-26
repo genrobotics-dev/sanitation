@@ -92,7 +92,7 @@ function KeyFeatures() {
           <div className="container">
             <div className="row">
               {displayedFeatures.map((feature, index) => (
-                <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div key={index} className="gcrow_card col-lg-4 col-md-6 col-sm-12 mb-4">
                   <div className="gcrow_featurecard card">
                     <div className="card-body">
                       <div className="content_wrapper">

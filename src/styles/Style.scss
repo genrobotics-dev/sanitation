@@ -1297,7 +1297,12 @@ header {
   padding: 6rem 0;
 
   .contents_cleaning {
-    width: 93%
+    width: 93%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
   }
 
   .cleaners_sec .container-fluid {
@@ -1940,7 +1945,7 @@ header {
         }
 
         .count_label {
-          font-size: 8px;
+          font-size: 12px;
         }
       }
 
@@ -5174,7 +5179,7 @@ section.service_sec.gcrow_services .service_card p {
     img {
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
     }
 
     @media screen and (max-width: 2560px) {
@@ -8320,7 +8325,7 @@ section.key_features .flex.justify-center.mt-10 {
 .solutions_sec {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   height: 100%;
   overflow: hidden;
 
@@ -8434,7 +8439,7 @@ section.key_features .flex.justify-center.mt-10 {
     padding-bottom: 8rem !important;
 
     p {
-      width: 900px !important;
+      width: 800px !important;
     }
   }
 }
@@ -9241,7 +9246,7 @@ section.key_features .flex.justify-center.mt-10 {
         background-size: cover;
         width: 30%;
         height: 30%;
-        right: 0;
+        right: 5px;
         top: 50px;
       }
 
@@ -10253,6 +10258,10 @@ section.key_features .flex.justify-center.mt-10 {
     /*padding-right: 40rem;*/
   }
 
+  .gcrow_card {
+    width: 50%;
+  }
+
   /*.container .row {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -10269,23 +10278,9 @@ section.key_features .flex.justify-center.mt-10 {
 
   /* @media (min-width: 992px) {
     .container .row>.col-lg-4 {
-      flex: 0 0 25% !important;
-      box-sizing: border-box !important;
-      flex-wrap: nowrap !important;
-       justify-content: center !important;
-      align-items: stretch !important;
-      width: 100% !important;
-      margin: 0 auto !important;
-      padding: 4rem 4rem !important;
-      max-width: 25% !important;
-      min-width: 0 !important;
-      display: flex;
-
-      .gcrow_featurecard {
-        width: 100%;
-      }
+      width: 0 !important;
     }
-  }
+  }*/
 
   /*@media (min-width: 768px) and (max-width: 991px) {
     .container .row>.col-md-6 {
@@ -10555,7 +10550,7 @@ section.key_features .flex.justify-center.mt-10 {
 
   .bandicoot_image_wrapper {
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
     border-radius: 40px;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
@@ -10591,8 +10586,9 @@ section.key_features .flex.justify-center.mt-10 {
 
     p {
       font-family: "Roboto", sans-serif;
-      font-size: 1.25rem !important;
+      font-size: 1.25rem;
       text-align: justify;
+
     }
 
     ul {
@@ -10637,7 +10633,7 @@ section.key_features .flex.justify-center.mt-10 {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh;*/
   display: flex;
   align-items: center;
 
@@ -10702,15 +10698,15 @@ section.key_features .flex.justify-center.mt-10 {
         &::after {
           content: "";
           position: absolute;
-          width: 75%;
-          height: 1px;
+          width: 50%;
+          height: 1.5px;
           background: linear-gradient(90deg,
               rgba(252, 217, 1, 0) 0%,
               rgba(0, 0, 0, 0.819) 50%,
               rgba(252, 217, 1, 0) 100%);
           left: 50%;
           transform: translateX(-50%);
-          bottom: -6px;
+          top: 1.5em;
         }
       }
 
@@ -10911,6 +10907,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
       padding-bottom: 20px;
       text-align: center;
       position: relative;
+      height: 100px;
 
       &::after {
         content: "";
@@ -10958,7 +10955,6 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
   }
 
   section.key_values_sec .row>div:nth-of-type(3) {
-    padding-top: 2rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -11094,8 +11090,11 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
     transform: translateX(-50%);
     width: 60%;
     text-align: center;
-
     transition: all 0.2s ease-in-out;
+
+    @media (max-width: 769px) {
+      padding: 1rem;
+    }
 
     h1 {
       font-size: 2.5rem;
@@ -11109,6 +11108,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
       text-align: center !important;
       padding-top: 5px;
       margin: 0;
+      font-weight: 530;
     }
 
     .line__ {
@@ -11187,7 +11187,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
       p {
         line-height: 1.7rem;
         font-size: 0.95rem !important;
-        padding: 1rem 0;
+        padding: 1rem 1rem;
       }
     }
 
@@ -11263,6 +11263,10 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
     font-family: "Anton", sans-serif;
     text-align: center;
     font-size: 2.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   .benifits_card {

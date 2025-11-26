@@ -76,11 +76,12 @@ function SanitaionWorkers() {
       <p className="sub_title">More Than Just a Robot</p>
       <br />
       <p className="sub_title2">
-        Sanitation robots are not just technological upgrades; they are catalysts for social
-        upliftment. By eliminating manual entry into hazardous spaces, they restore dignity
-        to sanitation workers and offer safer, healthier, and more respected roles as Robotic Operators.
-        Through focused training programs, workers gain the skills to operate and maintain advanced robotic systems.
-        This shift not only enhances their livelihood but also integrates them into a modern, technology-driven workforce, fostering confidence, pride, and long-term growth.
+        Our robots represent far more than technological advancement; they serve as catalysts
+        for meaningful social transformation. By removing the need for human entry into hazardous confined spaces,
+        they uphold the dignity of frontline workers and transition them into safer, respected, and future-ready roles as Robotic Operators.
+        Through comprehensive training and capability, building programs, workers acquire the technical proficiency to operate and maintain these advanced systems.
+        This transformation not only elevates their livelihood and safety but also integrates them into a modern, technology-driven workforce.
+        The result is a stronger sense of confidence, pride, and long-term socio-economic progress.
       </p>
       <br />
       <style jsx global>{`
