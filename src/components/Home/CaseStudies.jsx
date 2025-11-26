@@ -126,9 +126,12 @@ function CaseStudies() {
   });
   const [caseList, setCaseList] = useState(4);
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(null);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+    }
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };

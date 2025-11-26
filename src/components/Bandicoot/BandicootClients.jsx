@@ -1,5 +1,8 @@
-import React from "react";
+
+"use client";
+import { useState, useEffect } from "react";
 import Clients from "../common/Clients";
+
 
 import img1 from "@/assets/clients/indian_oil.webp";
 import img2 from "@/assets/clients/municipal_council_ambala.webp";
@@ -130,9 +133,40 @@ const clientsData = [
 
 
 function BandicootClients() {
+
+  const [isStatic, setIsStatic] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    setScreenWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+
+    if (screenWidth === 0) {
+      return;
+    }
+
+    if (screenWidth < 1024 || clientsData.length > 5) {
+      setIsStatic(false);
+    } else {
+      setIsStatic(true);
+    }
+  }, [screenWidth, clientsData.length]);
+
   return (
     <div>
-      <Clients clientsData={clientsData} />
+      <Clients clientsData={clientsData} isStatic={isStatic} />
     </div>
   );
 }

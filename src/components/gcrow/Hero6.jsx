@@ -27,17 +27,17 @@ function Hero6() {
       </picture>
       <div className="context_area" id="hero_main">
         <div className="sub_logo" id="gcrow_logo">
-        <picture>
+          <picture>
             <source media="(max-width: 1024px)" srcSet={MobileLogo.src} />
             <source media="(min-width: 1025px)" srcSet={Logo.src} />
             <Image
-            src={Logo}
-            width={0}
-            height={0}
-            alt="G Crow logo"
-            layout="responsive"
-            id="gcrow_logo"
-          />
+              src={Logo}
+              width={0}
+              height={0}
+              alt="G Crow logo"
+              layout="responsive"
+              id="gcrow_logo"
+            />
           </picture>
         </div>
         <h1 className="since-banner home" id="gcrow_heading">
@@ -52,9 +52,9 @@ function Hero6() {
             efficiency and improving resource allocation for cleaner cities and
             greater citizen satisfaction.
           </p>
-          <a href="#enquiry_form" role="button" className="explore_btn">
+          {/* <a href="#enquiry_form" role="button" className="explore_btn">
             Request a Demo
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

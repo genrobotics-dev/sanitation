@@ -365,32 +365,37 @@ function Header() {
             </Link>
           </div>
         </div>
-        <div className="menu_drop_down">
-          <p
-            className={
-              resourcesPaths.includes(pathname)
-                ? "menu_item mb-0 active"
-                : "menu_item mb-0"
-            }
-            aria-current={resourcesPaths.includes(pathname) ? "page" : undefined}
-            href="/resources"
-          >
-            Resources
-          </p>
-          <ul className="dropdown_menu">
-            <li
+        <div className="dropdown-wrapper">
+          <h2 className="dropdown-title">
+            Resources{" "}
+            <i>
+              <Fa.FaChevronDown />
+            </i>
+          </h2>
+          <div className="dropdown-products">
+            <Link
+              href="/blogs"
+              onClick={() => setIsOpen(false)}
               className={
-                pathname === "/blogs" ? "sub_active" : ""
+                pathname === "/blogs"
+                  ? "activePath"
+                  : ""
               }
             >
-              <a href="/blogs">
-                Blogs
-              </a>
-            </li>
-            {/* <li className={pathname === "/news-&-articles" ? "sub_active" : ""}>
-                    <a href="/news">News & Articles</a>
-                  </li> */}
-          </ul>
+              Blogs
+            </Link>
+            {/*<Link
+              href="/news"
+              onClick={() => setIsOpen(false)}
+              className={
+                pathname === "/news"
+                  ? "activePath"
+                  : ""
+              }
+            >
+              News & Media
+            </Link>*/}
+          </div>
         </div>
         {/* <a
           className={pathname === "/blog" ? "activePath" : ""}

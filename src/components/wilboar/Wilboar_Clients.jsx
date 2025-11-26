@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Clients from "../common/Clients";
 
 import img1 from "@/assets/clients/indah_water.webp";
@@ -13,11 +13,39 @@ const clients = [
 ];
 
 function Wilboar_Clients() {
+  const [isStatic, setIsStatic] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    setScreenWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+
+    if (screenWidth === 0) {
+      return;
+    }
+
+    if (screenWidth < 1024 || clients.length > 5) {
+      setIsStatic(false);
+    } else {
+      setIsStatic(true);
+    }
+  }, [screenWidth, clients.length]);
 
   return (
     <div>
-      <Clients clientsData={clients} />
+      <Clients clientsData={clients} isStatic={isStatic} />
     </div>
   );
 }

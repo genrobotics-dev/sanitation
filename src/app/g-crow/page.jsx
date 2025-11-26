@@ -1,7 +1,7 @@
 import DigitalTransform from "@/components/gcrow/DigitalTransform";
 import Gcrow_cover from "@/components/gcrow/Gcrow_cover";
 import Gcrow_faq from "@/components/gcrow/Gcrow_faq";
-import Gcrow_form from "@/components/gcrow/Gcrow_form";
+//import Gcrow_form from "@/components/gcrow/Gcrow_form";
 import Gcrow_services from "@/components/gcrow/Gcrow_services";
 import Hero6 from "@/components/gcrow/Hero6";
 import KeyFeatures from "@/components/gcrow/KeyFeatures";
@@ -35,7 +35,7 @@ function page() {
       <Gcrow_cover />
       <Gcrow_services />
       <Gcrow_faq />
-      <Gcrow_form />
+      {/* <Gcrow_form /> */}
       <ScrollToTop />
     </main>
   );

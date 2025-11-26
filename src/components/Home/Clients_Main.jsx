@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Clients from "../common/Clients";
 
 import keralaWaterAuthority from "@/assets/clients/kerala_water_authority.webp";
@@ -235,6 +236,36 @@ const clientsData = [
 ];
 
 function Clients_Main() {
+  const [isStatic, setIsStatic] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    setScreenWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+
+    if (screenWidth === 0) {
+      return;
+    }
+
+    if (screenWidth < 1024 || clientsData.length > 5) {
+      setIsStatic(false);
+    } else {
+      setIsStatic(true);
+    }
+  }, [screenWidth, clientsData.length]);
+
   return (
     <div>
       <Clients clientsData={clientsData} />

@@ -3,7 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-function Clients({ clientsData }) {
+function Clients({ clientsData, isStatic = false }) {
+  console.log(isStatic);
 
   return (
     <section className="clients_sec">
@@ -20,21 +21,37 @@ function Clients({ clientsData }) {
           </p>
         </div>
         <div>
-          <Marquee autoFill={true}>
-            {
-              clientsData && clientsData.map((item, idx) => (
-                <div key={idx} className="mx-8">
-                  <Image
-                    src={item.image?.src}
-                    alt={`item - ${idx}`}
-                    width={item.width}
-                    height={item.height}
-                    className="object-contain max-h-16 md:max-h-20 2xl:max-h-24"
-                  />
-                </div>
-              ))
-            }
-          </Marquee>
+          {isStatic ? (
+            <div className="flex justify-center flex-wrap gap-8 items-center">
+              {clientsData &&
+                clientsData.map((item, idx) => (
+                  <div key={idx}>
+                    <Image
+                      src={item.image?.src}
+                      alt={`item - ${idx}`}
+                      width={item.width}
+                      height={item.height}
+                      className="object-contain max-h-16 md:max-h-20 2xl:max-h-24"
+                    />
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <Marquee autoFill={true}>
+              {clientsData &&
+                clientsData.map((item, idx) => (
+                  <div key={idx} className="mx-8">
+                    <Image
+                      src={item.image?.src}
+                      alt={`item - ${idx}`}
+                      width={item.width}
+                      height={item.height}
+                      className="object-contain max-h-16 md:max-h-20 2xl:max-h-24"
+                    />
+                  </div>
+                ))}
+            </Marquee>
+          )}
         </div>
       </div>
     </section>
