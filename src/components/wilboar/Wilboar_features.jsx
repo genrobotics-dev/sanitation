@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 
 import feature1 from "@/assets/products/wilboar/features/remote_control_system.webp";
@@ -66,8 +66,31 @@ const features = [
 
 function Wilboar_features() {
   const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const displayedFeatures = showAll ? features : features.slice(0, 4);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const displayedFeatures = useMemo(() => {
+    if (screenWidth === 0) return [];
+    if (screenWidth > 1024) {
+      return features;
+    } else {
+      return showAll ? features : features.slice(0, 4);
+    }
+  }, [screenWidth, showAll]);
+
   return (
     <section className="key_features">
       <div className="container-fluid features_container">
@@ -115,7 +138,7 @@ function Wilboar_features() {
                     </div>
                   ))}
               </div>
-              {features.length > 4 && (
+              {screenWidth < 1024 && features.length > 4 && (
                 <div className="text-center mt-4">
                   <button
                     onClick={() => setShowAll(!showAll)}

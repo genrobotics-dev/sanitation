@@ -1,15 +1,39 @@
 "use client"
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function KeyFeatures({ featuresData, title, subTitle, className = "" }) {
   const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0); // Initialize with 0 or a default to prevent hydration mismatch
 
-  const displayedFeatures = showAll
-    ? featuresData
-    : featuresData.slice(0, 4);
-  console.log(displayedFeatures);
+  useEffect(() => {
+    // Set initial screenWidth after component mounts
+    setScreenWidth(window.innerWidth);
 
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Determine displayedFeatures based on screenWidth and showAll state
+  const displayedFeatures = React.useMemo(() => {
+    if (screenWidth === 0) return []; // Prevent displaying data before screenWidth is set
+    if (screenWidth > 1024) {
+      return featuresData;
+    } else {
+      return showAll ? featuresData : featuresData.slice(0, 4);
+    }
+  }, [featuresData, screenWidth, showAll]);
+
+  const handleShowMore = () => {
+    setShowAll((prevShowAll) => !prevShowAll);
+  };
 
   return (
     <section className={`key_features md:${className || ""}`} id="key_features">
@@ -55,10 +79,11 @@ function KeyFeatures({ featuresData, title, subTitle, className = "" }) {
                     </div>
                   ))}
               </div>
-              {featuresData.length > 4 && (
+
+              {screenWidth < 1024 && featuresData.length > 4 && (
                 <div className="text-center mt-4">
                   <button
-                    onClick={() => setShowAll(!showAll)}
+                    onClick={handleShowMore}
                     className="show_more_btn"
                   >
                     {showAll ? "Show Less" : "Show More"}

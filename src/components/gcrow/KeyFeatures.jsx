@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import headset from "@/assets/products/gcrow/icons/headset.svg";
 import gps from "@/assets/products/gcrow/icons/gps.svg";
@@ -50,22 +50,30 @@ const features = [
 
 function KeyFeatures() {
   const [showAll, setShowAll] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
-    // Check screen size on mount and when resizing
-    function handleResize() {
-      setIsMobile(window.innerWidth < 992); // Bootstrap lg: 992px
-    }
-    handleResize();
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  // Show all cards on larger screens; show toggle on mobile/tablet
-  const displayedFeatures =
-    !isMobile || showAll ? features : features.slice(0, 4);
+  const displayedFeatures = useMemo(() => {
+    if (screenWidth === 0) return [];
+    if (screenWidth > 1024) {
+      return features;
+    } else {
+      return showAll ? features : features.slice(0, 4);
+    }
+  }, [screenWidth, showAll]);
 
   return (
     <section className="gcrow_features">
@@ -104,7 +112,7 @@ function KeyFeatures() {
                 </div>
               ))}
             </div>
-            {features.length > 4 && isMobile && (
+            {screenWidth < 1024 && features.length > 4 && (
               <div className="text-center mt-4">
                 <button
                   onClick={() => setShowAll(!showAll)}

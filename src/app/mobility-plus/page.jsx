@@ -29,7 +29,10 @@ export function generateMetadata() {
     title: "Bandicoot Mobility Plus - Sewer Cleaning Robot",
     description:
       "Genrobotics drives sustainable robotics innovation with advanced solutions such as Bandicoot, Bandicoot Mobility Plus, Bandicoot Mobility, GCrow, and Wilboar. Supported by industry leaders including ONGC, IOCL, BPCL, and ADANI—and bolstered by investments from Anand Mahendra and Sreedhar Vembu of Zoho—our cutting-edge systems embody excellence, efficiency, and eco-friendly technology.",
-    url: "https://www.sanitation.genrobotics.com",
+    url: "https://sanitation.genrobotics.com/mobility-plus",
+    alternates: {
+      canonical: "https://sanitation.genrobotics.com/mobility-plus",
+    },
   });
 }
 

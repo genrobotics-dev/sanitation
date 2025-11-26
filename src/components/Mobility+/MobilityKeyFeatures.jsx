@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import key1 from "@/assets/products/mobilityPlus/features/hydraulic_loading_unloading.webp";
 import key2 from "@/assets/products/mobilityPlus/features/hydraulic_vehicle_stabilizer.webp";
@@ -82,10 +82,30 @@ const keySubFeature = `Explore the features of Bandicoot Mobility+ that powers f
 
 function MobilityKeyFeatures() {
   const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const displayedFeatures = showAll ? featuresData : featuresData.slice(0, 4);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
 
-  console.log(displayedFeatures);
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const displayedFeatures = React.useMemo(() => {
+    if (screenWidth === 0) return [];
+    if (screenWidth > 1024) {
+      return featuresData;
+    } else {
+      return showAll ? featuresData : featuresData.slice(0, 4);
+    }
+  }, [screenWidth, showAll]);
 
   return (
     <section className="key_features" id="mobility_key_features">
@@ -131,7 +151,7 @@ function MobilityKeyFeatures() {
                     </div>
                   ))}
               </div>
-              {featuresData.length > 4 && (
+              {screenWidth < 1024 && featuresData.length > 4 && (
                 <div className="text-center mt-4">
                   <button
                     onClick={() => setShowAll(!showAll)}

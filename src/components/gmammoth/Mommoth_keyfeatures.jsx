@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 
 import feature1 from "@/assets/products/gmammoth/features/automatic_grabber.webp";
@@ -50,10 +50,31 @@ const cleaningFeatures = [
 
 function Mommoth_keyfeatures() {
   const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const displayedFeatures = showAll
-    ? cleaningFeatures
-    : cleaningFeatures.slice(0, 4);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const displayedFeatures = useMemo(() => {
+    if (screenWidth === 0) return [];
+    if (screenWidth > 1024) {
+      return cleaningFeatures;
+    } else {
+      return showAll ? cleaningFeatures : cleaningFeatures.slice(0, 4);
+    }
+  }, [screenWidth, showAll]);
+
   return (
     <section className="key_features gmammoth_features features_container">
       <div className="container-fluid">
@@ -88,7 +109,7 @@ function Mommoth_keyfeatures() {
                 </div>
               ))}
             </div>
-            {cleaningFeatures.length > 4 && (
+            {screenWidth < 1024 && cleaningFeatures.length > 4 && (
               <div className="text-center mt-4">
                 <button
                   onClick={() => setShowAll(!showAll)}

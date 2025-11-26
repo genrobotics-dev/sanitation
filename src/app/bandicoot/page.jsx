@@ -94,7 +94,10 @@ export function generateMetadata() {
     title: "Bandicoot - Advanced Manhole Cleaning Robot",
     description:
       "Experience Bandicoot, India’s first robotic manhole cleaning robot by GenRobotics — designed to eliminate manual scavenging and ensure safe sanitation.",
-    url: "https://www.sanitation.genrobotics.com/bandicoot"
+    url: "https://sanitation.genrobotics.com/bandicoot",
+    alternates: {
+      canonical: "https://sanitation.genrobotics.com/bandicoot",
+    },
   });
 }
 
