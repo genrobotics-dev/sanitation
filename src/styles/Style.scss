@@ -5564,7 +5564,7 @@ section.service_sec.gcrow_services .service_card p {
 
       p {
         font-size: 1.1rem;
-        text-align: justify;
+        text-align: center;
       }
     }
 
@@ -10144,6 +10144,10 @@ section.key_features .flex.justify-center.mt-10 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2.5rem;
+
+    @media screen and (max-width:768px) {
+      font-size: 1.5rem;
+    }
   }
 
   .tranform_card {
@@ -10165,7 +10169,7 @@ section.key_features .flex.justify-center.mt-10 {
       padding: 2rem 1rem;
 
       h1 {
-        font-size: 1.6rem !important;
+        font-size: 1.25rem !important;
         font-weight: 400 !important;
       }
 
@@ -10295,7 +10299,7 @@ section.key_features .flex.justify-center.mt-10 {
   @media screen and (max-width: 768px) {
     .title_area {
       h1 {
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
       }
 
       p {
@@ -10459,6 +10463,10 @@ section.key_features .flex.justify-center.mt-10 {
       padding-left: 10px;
       color: #000;
       transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width:768px) {
+        font-size: 1.25rem !important;
+      }
     }
 
     /*&:hover .card-title {

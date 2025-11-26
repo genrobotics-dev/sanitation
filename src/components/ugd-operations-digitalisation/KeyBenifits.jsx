@@ -1,5 +1,5 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, useEffect, useMemo } from "react";
 
 import img1 from "@/assets/services/ugd-operations-digitalisation/benifits/Enhanced Efficiency.svg";
 import img2 from "@/assets/services/ugd-operations-digitalisation/benifits/Complete Transparency.svg";
@@ -64,8 +64,31 @@ const benefits = [
 
 function KeyBenifits() {
   const [showAll, setShowAll] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const displayedBenifits = showAll ? benefits : benefits.slice(0, 4);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const displayedBenefits = useMemo(() => {
+    if (screenWidth === 0) return [];
+    if (screenWidth > 1024) {
+      return benefits;
+    } else {
+      return showAll ? benefits : benefits.slice(0, 4);
+    }
+  }, [screenWidth, showAll]);
+
   return (
     <section className="key_benifits_sec">
       <div className="container-fluid" style={{ padding: "0 20px" }}>
@@ -75,7 +98,7 @@ function KeyBenifits() {
           </h1>
           <br />
           <div className="row">
-            {displayedBenifits.map((item, indx7) => {
+            {displayedBenefits.map((item, indx7) => {
               return (
                 <div className="col-lg-3 col-md-6 col-sm-12 mt-4" key={indx7}>
                   <div className="card benifits_card">
@@ -93,7 +116,7 @@ function KeyBenifits() {
               );
             })}
           </div>
-          {displayedBenifits.length > 3 && (
+          {screenWidth < 1024 && benefits.length > 4 && (
             <div className="text-center mt-4">
               <button
                 onClick={() => setShowAll(!showAll)}
