@@ -32,7 +32,7 @@ function WhyBMP() {
           and an advanced waste management system. This all-in-one solution
           streamlines the entire process, from transportation to cleaning and
           on-site waste disposal. By eliminating the need for separate
-          transportation and manual loading/unloading of the robot and waste,
+          transportation and manual loading and unloading of the robot and waste,
           Mobility+ significantly reduces transit times between cleaning
           locations, enhances operational speed, and improves overall
           efficiency. It's the perfect solution for municipalities and

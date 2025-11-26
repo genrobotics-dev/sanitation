@@ -49,7 +49,7 @@ function OurStrength() {
                   }}
                 />
               </div>
-              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-left">
+              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-left" style={{ margin: "auto 0" }}>
                 <div className="hidden lg:block">
                   <h1>Our Culture is Our Strength</h1>
                   <p className="block text-gray-600">

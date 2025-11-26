@@ -25,13 +25,13 @@ function StandardSolutions() {
   const isTablet = width >= 769 && width <= 990;
 
   return (
-    <section className="complex-risks_sec">
+    <section className="complex-risks_sec" id="std_solutions">
       <div className="container-fluid">
         <div className="lg:px-[4rem]">
           {isTablet ? (
             // Tablet layout (heading → image → paragraph)
             <div className="flex flex-col items-center text-center">
-              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-center">
+              <div className="why_bandicoot_content mb-6 w-full max-w-[900px] text-center" style={{ margin: "auto 0" }}>
                 <h1>When Standard Solutions Aren't Enough</h1>
                 <span className="block text-gray-600">
                   Addressing Niche and Complex Requirements
@@ -73,12 +73,12 @@ function StandardSolutions() {
             // Default layout (desktop & mobile)
             <div className="row px-[20px]">
               <div className="col-lg-6 col-md-12 col-sm-12 mt-3 p-0">
-              <div className="md:hidden why_bandicoot_content">
-                <h1>When Standard Solutions Aren't Enough</h1>
-                <p className="text-center">
-                  Addressing Niche and Complex Requirements
-                </p>
-              </div>
+                <div className="md:hidden why_bandicoot_content">
+                  <h1>When Standard Solutions Aren't Enough</h1>
+                  <p className="text-center">
+                    Addressing Niche and Complex Requirements
+                  </p>
+                </div>
                 <div className="bandicoot_image_wrapper">
                   <LazyLoadImage
                     src={image.src}

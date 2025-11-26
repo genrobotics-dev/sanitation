@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Hero12() {
   return (
@@ -9,6 +9,7 @@ function Hero12() {
         </div>
       </div>
     </section>
+
   );
 }
 

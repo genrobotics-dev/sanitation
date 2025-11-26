@@ -3182,7 +3182,7 @@ header {
 
       p {
         font-size: 16px;
-        margin-top: 16px;
+        margin-top: 65px;
       }
     }
   }
@@ -4023,6 +4023,11 @@ section.service_sec.gcrow_services .service_card p {
     font-size: 1.25rem !important;
     text-align: center;
     padding-bottom: 3rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem !important;
+    }
+
   }
 
   @media screen and (max-width: 1024px) {
@@ -4581,6 +4586,10 @@ section.service_sec.gcrow_services .service_card p {
   .rob_pro_contents {
     p {
       font-size: 1.25rem !important;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1rem !important;
     }
   }
 
@@ -9922,7 +9931,7 @@ section.key_features .flex.justify-center.mt-10 {
     font-size: 2.5rem !important;
 
     @media screen and (max-width:768px) {
-      font-size: 2rem !important;
+      font-size: 1.5rem !important;
     }
   }
 
@@ -9988,6 +9997,10 @@ section.key_features .flex.justify-center.mt-10 {
       font-size: 1.5rem;
       z-index: 1;
       transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.25rem !important;
+      }
     }
 
     @media screen and (max-width: 1669px) {
@@ -11538,7 +11551,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
 
   p {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: justify;
     margin-bottom: 40px;
   }
@@ -11953,7 +11966,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
     font-family: "Roboto", sans-serif;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .careers_card {
@@ -12171,7 +12184,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
     font-family: "Roboto", sans-serif;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   @media (max-width: 768px) {
@@ -12240,7 +12253,7 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
     font-family: "Roboto", sans-serif;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   @media screen and (max-width: 768px) {

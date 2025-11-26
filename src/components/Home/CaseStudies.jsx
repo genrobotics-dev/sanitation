@@ -126,7 +126,7 @@ function CaseStudies() {
   });
   const [caseList, setCaseList] = useState(4);
 
-  const [screenWidth, setScreenWidth] = useState(null);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

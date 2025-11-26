@@ -49,13 +49,13 @@ function Openings() {
   // Filter function to match Operations and Maintenance department
   const filterByDepartment = (jobList) => {
     if (!jobList || !Array.isArray(jobList)) return [];
-    
+
     return jobList.filter((job) => {
       if (!job.department_name) return false;
       const department = job.department_name.toLowerCase().trim();
       // Match variations: "operations and maintenance", "operations & maintenance", etc.
       return (
-        department.includes("operations") && 
+        department.includes("operations") &&
         (department.includes("maintenance") || department.includes("maint"))
       );
     });
@@ -68,7 +68,7 @@ function Openings() {
       // Department to filter by
       const departmentFilter = "Operations and Maintenance";
       const encodedDepartment = encodeURIComponent(departmentFilter);
-      
+
       // Build URL with department filter
       let fetchUrl = url;
       if (!fetchUrl) {
@@ -93,7 +93,7 @@ function Openings() {
 
       // Track if we're using API filtering or client-side filtering only
       let usingApiFilter = fetchUrl.includes("department_name");
-      
+
       // If API doesn't support department filter and returns error, try without filter
       if (!res.ok && usingApiFilter && !url) {
         // Fallback: try without department filter and filter client-side
@@ -112,7 +112,7 @@ function Openings() {
       }
 
       const data = await res.json();
-      
+
       // Handle both array response and paginated response
       if (Array.isArray(data)) {
         // Filter client-side as fallback
@@ -126,15 +126,15 @@ function Openings() {
         // Filter results client-side (always filter to ensure we only show Operations and Maintenance)
         const filteredResults = filterByDepartment(data.results || []);
         setJobs(filteredResults);
-        
+
         // Update pagination URLs to include department filter (only if API supports it)
         let nextUrl = data.next;
         let prevUrl = data.previous;
-        
+
         // Only add filter to pagination URLs if we're using API-side filtering
         // (Check if current fetchUrl had the filter, or if pagination URLs already have it)
         const shouldAddFilter = usingApiFilter || (url && url.includes("department_name"));
-        
+
         if (shouldAddFilter) {
           if (nextUrl && !nextUrl.includes("department_name")) {
             const separator = nextUrl.includes("?") ? "&" : "?";
@@ -145,16 +145,16 @@ function Openings() {
             prevUrl = `${prevUrl}${separator}department_name=${encodedDepartment}`;
           }
         }
-        
+
         setNextPageUrl(nextUrl);
         setPreviousPageUrl(prevUrl);
-        
+
         // Calculate total pages and current page
         if (data.count && data.results) {
           const perPage = data.results.length || 10;
           const calculatedPages = Math.ceil(data.count / perPage);
           setTotalPages(calculatedPages);
-          
+
           // Determine current page
           if (isNext && data.previous) {
             // If we went to next page, extract from previous URL and add 1
@@ -219,7 +219,7 @@ function Openings() {
         <h1>Current Openings</h1>
         <p>Find your place in our team. Let's build the future together.</p>
         <br />
-        
+
         {loading && (
           <div className="text-center py-5">
             <p>Loading jobs...</p>
@@ -240,11 +240,11 @@ function Openings() {
 
         {!loading && !error && jobs && jobs.length > 0 && (
           <>
-            <div className="row">
+            <div className="row justify-content-center">
               {jobs.map((job, idx7) => {
                 const salary = formatSalary(job.min_salary, job.max_salary, job.salary_type);
                 const jobDescription = job.description || "";
-                
+
                 return (
                   <div className="col-lg-6 col-md-6 col-sm-12 mt-4" key={job.id || idx7}>
                     <div className="card careers_card">
@@ -265,7 +265,7 @@ function Openings() {
                       </p>
                       <hr />
                       {jobDescription ? (
-                        <div 
+                        <div
                           className="description"
                           dangerouslySetInnerHTML={{ __html: jobDescription }}
                         />
@@ -294,11 +294,11 @@ function Openings() {
                   >
                     <FaChevronLeft /> Previous
                   </button>
-                  
+
                   <div className="pagination_info">
                     Page {currentPage} {totalPages > 1 && `of ${totalPages}`}
                   </div>
-                  
+
                   <button
                     onClick={handleNextPage}
                     disabled={!nextPageUrl}
