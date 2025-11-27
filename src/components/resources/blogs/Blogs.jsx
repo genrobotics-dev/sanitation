@@ -63,16 +63,16 @@ export default async function BlogsPage({ searchParams }) {
                     />
                   </Link>
                 )}
-                <h4 className="font-semibold text-lg sm:text-xl leading-8">
+                <h4 className="font-semibold text-lg sm:text-xl leading-tight break-words">
                   <Link
                     href={`/blogs/${blog.uid}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-justify text-black"
+                    className="text-left text-black"
                     style={
                       {
-                        textDecoration:"none",
-                        fontWeight:"600"
+                        textDecoration: "none",
+                        fontWeight: "600"
                       }
                     }
                     aria-label={`Go to blog: ${blog.title}`}
@@ -80,8 +80,8 @@ export default async function BlogsPage({ searchParams }) {
                     {blog.title}
                   </Link>
                 </h4>
-                <p className="text-sm mb-4">
-                  {blog.summary.slice(0, 120)}...
+                <p className="text-sm mb-4 line-clamp-3 break-words">
+                  {blog.summary.slice(0, 250)}...
                 </p>
               </div>
 
@@ -92,10 +92,10 @@ export default async function BlogsPage({ searchParams }) {
                   rel="noopener noreferrer"
                   className="inline-block w-full text-center text-sm font-medium text-black bg-[#FCD901] px-3 py-2 rounded-md hover:bg-[#FFE63D] transition"
                   style={
-                      {
-                        textDecoration:"none"
-                      }
+                    {
+                      textDecoration: "none"
                     }
+                  }
                   aria-label={`Read more about ${blog.title}`}
                 >
                   Read More
@@ -120,11 +120,10 @@ export default async function BlogsPage({ searchParams }) {
             <Link
               key={i}
               href={`/blogs?page=${i + 1}`}
-              className={`px-4 py-2 rounded-full ${
-                currentPage === i + 1
-                  ? "bg-[#FCD901] text-black"
-                  : "bg-gray-700 text-white"
-              }`}
+              className={`px-4 py-2 rounded-full ${currentPage === i + 1
+                ? "bg-[#FCD901] text-black"
+                : "bg-gray-700 text-white"
+                }`}
             >
               {i + 1}
             </Link>
