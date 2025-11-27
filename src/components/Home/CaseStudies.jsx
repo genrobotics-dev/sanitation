@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Modal from "react-bootstrap/Modal";
 
@@ -125,31 +125,6 @@ function CaseStudies() {
     phone: "",
   });
   const [caseList, setCaseList] = useState(4);
-
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setScreenWidth(window.innerWidth);
-    }
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (screenWidth > 1024) {
-      setCaseList(caseStudies.length);
-    } else {
-      setCaseList(4); // Reset to default or desired value for smaller screens
-    }
-  }, [screenWidth]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -399,28 +374,24 @@ function CaseStudies() {
           </div>
         </div>
         <br />
-        {
-          caseList != caseStudies.length && (
-            <button type="button" className="show_all" onClick={handleViewAll}>
-              {caseList != caseStudies.length ? (
-                <>
-                  <span> View all </span>
-                  {/*<span className ="count_span">
+        <button type="button" className="show_all" onClick={handleViewAll}>
+          {caseList != caseStudies.length ? (
+            <>
+              <span> View all </span>
+              {/*<span className ="count_span">
                 ({caseStudies.length - 4})
                 <Md.MdArrowDownward />
               </span>*/}
-                </>
-              ) : (
-                <>
-                  <span> Show Less </span>
-                  <i>
-                    <Md.MdArrowUpward />
-                  </i>
-                </>
-              )}
-            </button>
-          )
-        }
+            </>
+          ) : (
+            <>
+              <span> Show Less </span>
+              <i>
+                <Md.MdArrowUpward />
+              </i>
+            </>
+          )}
+        </button>
       </div>
     </section>
   );
