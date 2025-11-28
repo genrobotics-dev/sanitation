@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 export const serializers = {
   heading1: ({ children }) => <h1 className="text-4xl font-bold mb-4 text-black">{children}</h1>,
-  heading2: ({ children }) => <h2 className="text-3xl font-semibold mb-3 text-black">{children}</h2>,
-  heading3: ({ children }) => <h3 className="text-2xl font-medium mb-2">{children}</h3>,
-  heading4: ({ children }) => <h4 className="text-xl font-semibold mb-2 text-[#FCD901]">{children}</h4>,
-  heading5: ({ children }) => <h5 className="text-lg font-medium mb-2">{children}</h5>,
-  heading6: ({ children }) => <h6 className="text-base font-medium mb-2">{children}</h6>,
-  paragraph: ({ children }) => <p className="mb-4 text-black">{children}</p>,
+  heading2: ({ children }) => <h2 className="text-3xl font-semibold mb-3 text-black ">{children}</h2>,
+  heading3: ({ children }) => <h3 className="text-2xl font-medium mb-2 ">{children}</h3>,
+  heading4: ({ children }) => <h4 className="text-xl font-semibold mb-2 text-[#FCD901] ">{children}</h4>,
+  heading5: ({ children }) => <h5 className="text-lg font-medium mb-2 ">{children}</h5>,
+  heading6: ({ children }) => <h6 className="text-base font-medium mb-2 ">{children}</h6>,
+  paragraph: ({ children }) => <p className="mb-4 text-black ">{children}</p>,
   list: ({ children }) => <ul className="list-disc pl-6 mb-4">{children}</ul>,
   oList: ({ children }) => <ol className="list-decimal pl-6 mb-4">{children}</ol>,
   listItem: ({ children }) => <li className="mb-1">{children}</li>,
@@ -33,7 +33,7 @@ export const serializers = {
     const width = node.dimensions?.width || 800
     const height = node.dimensions?.height || 450
     return (
-      <div className="my-6 rounded-md overflow-hidden shadow-md">
+      <div className="my-6 rounded-md overflow-auto shadow-md">
         <Image src={src} alt={alt} width={width} height={height} className="w-full h-auto object-cover" />
         {node.copyright && <small className="text-xs block mt-1">{node.copyright}</small>}
       </div>

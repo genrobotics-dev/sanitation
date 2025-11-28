@@ -1,15 +1,17 @@
 import React from "react";
-import Advisors from "@/components/about/Advisors";
+//import Advisors from "@/components/about/Advisors";
 import Banner from "@/components/about/Banner";
-import CoreValues from "@/components/about/CoreValues";
-import Founders from "@/components/about/Founders";
+import CoreValues from "@/components/about/Transformation";
+import Founders from "@/components/about/Phylosophy";
 import Hero11 from "@/components/about/Hero11";
-import Journey2 from "@/components/about/Journey2";
-import MissionVision from "@/components/about/MissionVision";
+import Journey2 from "@/components/about/Journey";
+import MissionVision from "@/components/about/Unreachable";
 import OurStory from "@/components/about/OurStory";
-import Partners from "@/components/about/Partners";
-import Team from "@/components/about/Team";
-import WhyChoose from "@/components/Home/WhyChoose";
+import LeaveMessage from "@/components/about/LeaveMessage";
+
+//import Partners from "@/components/about/Partners";
+//import Team from "@/components/about/Team";
+//import WhyChoose from "@/components/Home/WhyChoose";
 import ScrollToTop from "@/components/ScrollToTop";
 import { createMetadata } from "@/utils/seo";
 import Head from "next/head";
@@ -38,10 +40,11 @@ function page() {
       <MissionVision />
       <CoreValues />
       <Founders />
-      <Team />
+      <LeaveMessage />
+      {/*<Team />
       <Advisors />
       <Partners />
-      <WhyChoose />
+      <WhyChoose />*/}
       <ScrollToTop />
     </main>
   );

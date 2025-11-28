@@ -63,7 +63,7 @@ export default async function BlogsPage({ searchParams }) {
                     />
                   </Link>
                 )}
-                <h4 className="font-semibold text-lg sm:text-xl leading-tight break-words">
+                <h4 className="font-semibold text-lg sm:text-xl leading-tight">
                   <Link
                     href={`/blogs/${blog.uid}`}
                     target="_blank"
@@ -80,7 +80,7 @@ export default async function BlogsPage({ searchParams }) {
                     {blog.title}
                   </Link>
                 </h4>
-                <p className="text-sm mb-4 line-clamp-3 break-words">
+                <p className="text-sm mb-4">
                   {blog.summary.slice(0, 250)}...
                 </p>
               </div>

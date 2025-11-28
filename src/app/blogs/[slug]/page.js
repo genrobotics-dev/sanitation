@@ -32,10 +32,10 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
-  
+
   try {
     const blog = await client.getByUID("blogs", resolvedParams.slug);
-    
+
     if (!blog) {
       return {
         title: "Blog Post Not Found | Genrobotics",
@@ -114,7 +114,7 @@ export async function generateMetadata({ params }) {
 export async function generateStaticParams() {
   try {
     const blogs = await client.getAllByType("blogs");
-    
+
     if (!blogs || blogs.length === 0) {
       console.log("No blogs found, returning empty array");
       return [];
@@ -134,7 +134,7 @@ export default async function BlogDetailPage({ params }) {
   const blog = await client
     .getByUID("blogs", resolvedParams.slug)
     .catch(() => null);
-    
+
 
   if (!blog) {
     return <p className="text-center py-10">Blog not found.</p>;

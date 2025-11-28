@@ -12339,789 +12339,712 @@ screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px
   }
 }
 
-.about_banner_sec {
+.about_sec {
   position: relative;
   width: 100%;
-  height: 550px;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #00000044;
-    top: 0;
-    left: 0;
-  }
-
-  img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: 0;
-  }
-
-  .content {
-    position: absolute;
-    display: block;
-    z-index: 2;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-
-    h1 {
-      font-family: "Anton", sans-serif;
-      text-shadow: 0 0 7px #1d1d1d;
-      color: #fff;
-      font-size: 3.5rem;
-      line-height: 4.5rem;
-      width: 65%;
-    }
-  }
-
-  @media screen and (min-width: 3840px) {
-    height: 900px;
-
-    .content {
-      width: 100%;
-
-      h1 {
-        font-size: 7rem;
-        line-height: 8rem;
-      }
-    }
-  }
-
-  @media screen and (max-width: 2560px) {
-    .content {
-      width: 100%;
-
-      h1 {
-        width: 100%;
-        font-size: 4rem;
-        line-height: 4.8rem;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1669px) {
-    .content {
-      width: 95%;
-
-      h1 {
-        font-size: 3rem;
-        line-height: 3.8rem;
-      }
-    }
-  }
-
-  @media (max-width: 1024px) {
-    height: 550px;
-
-    .content h1 {
-      font-size: 3.2rem;
-      width: 90%;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    height: 750px !important;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 300px;
-      background: #000000;
-      background: linear-gradient(180deg,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(255, 255, 255, 0) 100%);
-    }
-
-    .content {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      font-size: 1.8rem;
-      top: 50px;
-      text-align: justify;
-      font-weight: 500;
-      line-height: 2.2rem;
-      padding: 3rem 20px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    height: 620px;
-
-    img {
-      object-fit: cover;
-    }
-
-    .content {
-      h1 {
-        font-size: 1.5rem !important;
-        width: 100%;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    .content {
-      h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1300px) {
-  .about_banner_sec {
-    .content {
-      h1 {
-        width: 60% !important;
-        font-size: 2.5rem !important;
-        line-height: 3.5rem;
-        text-align: left;
-        /* keep left alignment */
-        text-wrap: balance;
-        /* balance line breaks */
-        word-break: normal;
-      }
-    }
-  }
-}
-
-
-
-.ourStory_sec {
-  position: relative;
-  padding: 5rem 0;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  /* Ensures the banner takes up the full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(@/assets/about/about_banner_image.webp);
+  background-size: cover;
+  /* Ensures the image covers the entire area */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+
+  /* Prevents image repetition */
+  .about_subtitle {
+    padding-bottom: 10rem;
+  }
 
   h1 {
     font-family: "Anton", sans-serif;
-    font-size: 5rem;
     text-align: center;
-  }
+    font-size: 2.5rem;
+    color: #FCD901;
+    z-index: 2;
 
-  #sub_title {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+
+    }
+
   }
 
   p {
+    z-index: 2;
+    padding-top: 10px;
     font-family: "Roboto", sans-serif;
-    font-size: 1.3rem;
-    text-align: justify;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: white;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    .line2 {
+
+      font-weight: 600;
+
+    }
+
   }
 
-  @media screen and (max-width: 600px) {
-    padding-bottom: 0px;
+  @media (max-width: 768px) {
+    padding: 3rem 20px;
 
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    #sub_title {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      text-align: justify;
-    }
-
-    .title_wrapper {
-      position: relative;
-
-      ::after {
-        content: "";
-        position: absolute;
-        width: 75%;
-        height: 1px;
-        background: linear-gradient(90deg,
-            rgba(252, 217, 1, 0) 0%,
-            rgba(0, 0, 0, 0.819) 50%,
-            rgba(252, 217, 1, 0) 100%);
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 4;
-      }
-    }
-
-    .story_container {
-      padding: 0 20px;
-    }
   }
 }
 
-.journey2_sec {
+
+
+
+
+.about_banner_sec {
   position: relative;
-  min-height: 100vh;
-  height: 100%;
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 7rem;
+  height: 284px;
+  overflow: hidden;
+  background-color: white;
+  padding: 0 6rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  background-image: url("../assets/newspaper.webp");
+
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @media (max-width: 768px) {
+      padding: 2rem 2rem;
+      display: block;
+      width: 100%;
+    }
+
+    .mid_heading {
+      flex: 1;
+
+      h1 {
+        font-family: "Anton", sans-serif;
+        font-size: 2rem;
+        text-align: justify;
+
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .mid_text {
+      flex: 1;
+
+      p {
+        font-family: "Roboto", sans-serif;
+        text-align: justify;
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      padding: 2rem 0;
+      display: block;
+
+      .mid_heading h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .mid_text p {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+  }
+}
+
+
+
+.ourstory_sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 193vh;
+  overflow: hidden;
+  background-image: url(@/assets/about/journey2_image.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   img {
-    position: relative;
     width: 100%;
     height: 100%;
     max-width: 100%;
-    height: 100%;
+    max-height: 100%;
     object-fit: cover;
-    object-position: center center;
-    z-index: 0;
   }
 
-  @media screen and (max-width: 600px) {
-    min-height: 100%;
+  .quote_mark {
+    position: absolute;
+    z-index: 2;
+    background-image: url("../assets/trust/symbol.webp");
+    background-size: cover;
+    transform: scaleX(-1);
+    width: 30%;
+    height: 30%;
+    left: 256px;
+    top: 190px;
   }
+
+  p {
+    position: absolute;
+    top: 35rem;
+    left: 22rem;
+    z-index: 2;
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.5rem;
+
+    .line2 {
+      font-weight: 600;
+    }
+
+  }
+
 }
 
-.mission_vision {
-  position: relative;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-
-  .banner_wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: #000;
-    border-radius: 30px;
-    overflow: hidden;
-
-    img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      z-index: 0;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .content_wrapper {
-      position: absolute;
-      top: 200px;
-      width: 80%;
-      height: auto;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      gap: 50;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .missionVisionCard {
-        position: relative;
-        width: 100%;
-        border-radius: 20px;
-        padding: 40px;
-        transition: all 0.2s ease-in-out;
-
-        h1 {
-          position: relative;
-          text-align: center;
-          color: #fcd901;
-          font-family: "Anton", sans-serif;
-          padding-bottom: 20px;
-
-          &::after {
-            content: "";
-            position: absolute;
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(90deg,
-                rgba(252, 217, 1, 0) 0%,
-                rgba(252, 218, 1, 0.819) 50%,
-                rgba(252, 217, 1, 0) 100%);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-
-        p {
-          width: 90%;
-          font-family: "Roboto", sans-serif;
-          font-size: 1.3rem;
-          text-align: justify;
-          padding-top: 10px;
-          color: #fff;
-          font-weight: 400;
-          margin: 0 auto;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        padding: 1rem !important;
-
-        .missionVisionCard {
-          padding: 1rem;
-        }
-      }
-
-      .mission_card {
-        background: #070b0f;
-        background: linear-gradient(90deg,
-            rgba(7, 11, 15, 1) 0%,
-            rgba(13, 18, 23, 1) 100%);
-      }
-
-      .vision_card {
-        background: #070b0f;
-        background: linear-gradient(-90deg,
-            rgba(7, 11, 15, 1) 0%,
-            rgba(13, 18, 23, 1) 100%);
-      }
-
-      @media screen and (max-width: 1024px) {
-        top: 20px;
-        width: 100%;
-        padding: 0 30px;
-        gap: 10;
-
-        .missionVisionCard {
-          width: 100%;
-
-          p {
-            font-size: 1rem;
-          }
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        display: block;
-
-        .missionVisionCard {
-          margin-top: 20px;
-        }
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      height: 100%;
-      min-height: 800px;
-
-      img {
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        bottom: -100px;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mission_container {
-      padding: 0 20px;
-    }
-  }
-}
-
-.core_values {
-  position: relative;
-  padding: 5rem 0;
+.journey2_sec {
+  padding: 2rem 6rem;
+  background-color: #fff;
+  text-align: center;
   min-height: 100vh;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  h1 {
-    font-family: "Anton", sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
+
+
+  @media screen and (max-width: 768px) {
+
+    padding: 3rem 20px !important;
+
   }
 
-  .cust_col_ {
-    margin-top: 40px;
+
+
+  @media screen and (max-width: 1024px) {
+
+    padding: 3rem 2rem;
+
+  }
+
+
+
+  .title {
+
+
+
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+
+    font-family: "Anton",
+
+      sans-serif;
+
+
 
     @media screen and (max-width: 768px) {
-      padding: 0;
+
+      font-size: 1.5rem !important;
+
     }
+
   }
 
-  .values_card {
-    padding: 20px;
-    border-radius: 30px;
-    border-color: #000;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
 
-    img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin: 0 auto;
+
+  .feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+
+
+
+    @media screen and (max-width: 600px) {
+
+      gap: 1rem;
+
     }
+
+
+
+    @media (min-width: 768px) {
+
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+
+    @media (min-width: 1024px) {
+
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+  }
+
+
+
+  .feature-card {
+
+    padding: 30px 20px;
+
+    border-radius: 0;
+
+    position: relative;
+
+    /*transition: all 0.3s ease;*/
+
+    background-color: transparent;
+
+    border: none !important;
 
     h3 {
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 10px 0;
     }
 
     p {
-      font-size: 1.25rem;
       text-align: justify;
     }
 
-    @media screen and (max-width: 768px) {
-      background-color: #ededed;
-      border-color: #e2e2e2;
+    /*transition: all 0.2s ease-in-out;*/
 
-      h3 {
-        font-weight: 900 !important;
-      }
 
-      .image_wrapper {
-        width: fit-content;
-        margin: 0 auto;
-        background-color: #e2e2e2;
-        padding: 10px;
-        border-radius: 15px;
-      }
-    }
 
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
-  }
-}
+    h3 {
 
-.founders_ {
-  position: relative;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-
-  .banner_wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: #000;
-    border-radius: 30px;
-    overflow: hidden;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 500px;
-      background: #000000;
-      background: linear-gradient(0deg,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(255, 255, 255, 0) 100%);
-      bottom: 0;
-      z-index: 1;
-    }
-
-    img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      z-index: 0;
-      transition: all 0.2s ease-in-out;
-    }
-
-    h1 {
-      position: absolute;
-      z-index: 3;
       font-family: "Anton", sans-serif;
-      color: #fcd901;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 80px;
+
     }
 
-    .founder_footer_content {
-      position: absolute;
-      bottom: 100px;
-      width: 100%;
-      z-index: 4;
-      padding-top: 5rem;
+    &:nth-child(1),
+    &:nth-child(3) {
+      position: relative;
+      /* Essential for ::after positioning */
 
-      .founders_card {
-        background-color: transparent;
-        border: none;
-        text-align: center;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
 
-        h2 {
-          font-size: 22px;
-          color: #fcd901;
-          text-transform: uppercase;
-          font-family: var(--poppins-font);
-          letter-spacing: 1px;
-          margin: 0;
-        }
+        /* Gradient: Top (0%) to Bottom (100%) */
+        background: linear-gradient(180deg,
+            /* 1. Transparent at the very top (Deep Fade Start) */
+            rgba(0, 0, 0, 0) 0%,
+            /* 2. Fade ends, solid line starts (e.g., 20% down) */
+            rgba(0, 0, 0, 0.8) 20%,
 
-        p {
-          color: #fff;
-          margin: 0;
-          padding-top: 10px;
-          font-size: 1rem;
-          font-family: "Roboto", sans-serif;
-          letter-spacing: 1px;
-        }
-      }
+            /* 3. SOLID SECTION (Covers the middle area for intersection) */
+            rgba(0, 0, 0, 1) 45%,
+            rgba(0, 0, 0, 1) 55%,
+            /* The solid line covers a small central band (45% to 55%) for better blending */
 
-      .founders_card {
-        border-radius: 0;
-        border-right: 1px solid #665906;
-        /* line between cards */
-      }
-
-      /* Remove border from the last card */
-      .row>div:last-child .founders_card {
-        border-right: none;
-      }
-
-      .footer_description {
-        color: #fff;
-        font-size: 1.2rem;
-        padding-top: 40px;
-        width: 85%;
-        margin: 0 auto;
-        font-family: "Roboto", sans-serif;
-        text-align: justify;
+            /* 4. Fade starts again */
+            rgba(0, 0, 0, 0.8) 80%,
+            /* 5. Transparent at the very bottom (Deep Fade End) */
+            rgba(0, 0, 0, 0) 100%);
       }
     }
-  }
 
-  @media screen and (min-width: 3840px) {
-    .banner_wrapper {
-      h1 {
-        font-size: 5rem;
-        top: 200px;
-      }
-
-      .founder_footer_content {
-        bottom: 200px;
-
-        .padding_space {
-          max-width: 90%;
-
-          h2 {
-            font-size: 4rem;
-          }
-
-          p {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            width: 90%;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 2560px) {
-    .banner_wrapper .founder_footer_content {
-      bottom: 150px;
-
-      .padding_space {
-        max-width: 90%;
-
-        .founders_card {
-          h2 {
-            font-size: 2.2rem;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-
-        .footer_description {
-          font-size: 1.7rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 1920px) {
-    .footer_description {
-      font-size: 1.2rem;
-      width: 80%;
-    }
-  }
-
-  @media screen and (max-width: 1669px) {
-    .banner_wrapper .founder_footer_content {
-      bottom: 100px;
-
-      .footer_description {
-        font-size: 18px;
-        width: 90%;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1280px) {
-    .banner_wrapper h1 {
-      font-size: 3rem;
-      top: 60px;
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    .banner_wrapper .founder_footer_content {
-      bottom: 70px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .banner_wrapper {
-      background-color: #000000;
-      min-height: 90vh !important;
-      height: 100%;
+    &:nth-child(1),
+    &:nth-child(2) {
+      position: relative;
+      /* Essential for ::before positioning */
 
       &::before {
         content: "";
         position: absolute;
+        left: 0;
+        bottom: 0;
         width: 100%;
-        height: 200px;
-        background: #000000;
-        background: linear-gradient(180deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(255, 255, 255, 0) 100%);
-        top: 100px;
-        z-index: 2;
-      }
+        height: 1px;
 
-      img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        padding-top: 2rem;
-        top: 40%;
-        transform: translateY(-50%);
-      }
+        /* Gradient: Left (0%) to Right (100%) */
+        background: linear-gradient(90deg,
+            /* 1. Transparent at the very left (Deep Fade Start) */
+            rgba(0, 0, 0, 0) 0%,
+            /* 2. Fade ends, solid line starts */
+            rgba(0, 0, 0, 0.8) 20%,
 
-      .padding_space {
-        width: 100%;
-        padding: 0;
-      }
+            /* 3. SOLID SECTION (Covers the middle area for intersection) */
+            rgba(0, 0, 0, 1) 45%,
+            rgba(0, 0, 0, 1) 55%,
 
-      h1 {
-        font-size: 1.5rem;
-        top: 30px;
-        width: 90%;
-        text-align: center;
-      }
-
-      .founder_footer_content {
-        bottom: 100px;
-        width: 95%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        .col-3 {
-          padding: 0;
-        }
-
-        .founders_card {
-          h2 {
-            font-size: 7px;
-            white-space: nowrap;
-            text-align: center;
-            font-weight: 600;
-          }
-
-          p {
-            font-size: 7px;
-            text-align: center;
-            white-space: nowrap;
-            padding-top: 2px;
-          }
-        }
-
-        .footer_description {
-          font-size: 14px;
-        }
-      }
-
-      .founder_footer_content .footer_description {
-        font-size: 10px;
-        padding-top: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
+            /* 4. Fade starts again */
+            rgba(0, 0, 0, 0.8) 80%,
+            /* 5. Transparent at the very right (Deep Fade End) */
+            rgba(0, 0, 0, 0) 100%);
       }
     }
+
+    &:hover .icon {
+
+      transform: scale(1.2);
+
+    }
+
+
+
+    &:hover h3 {
+
+      color: #dabf11;
+
+    }
+
+
+
+    .icon {
+
+      width: 80px;
+
+      height: 80px;
+
+      margin: 0 auto;
+
+      object-fit: contain;
+
+      transition: all 0.2s ease-in-out;
+
+    }
+
+
+
+    h3 {
+
+      font-size: 1.1rem;
+
+      font-weight: 700;
+
+      padding: 20px 0;
+
+      transition: all 0.2s ease-in-out;
+
+    }
+
+
+
+    p {
+
+      font-size: 1rem;
+
+      font-weight: 500;
+
+    }
+
+
+
+    @media screen and (max-width: 600px) {
+
+      border-radius: 10px;
+
+    }
+
   }
+
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1240px) {
 
-  /*.founders_ .founders_card .founder_footer_content{
-    padding-top: 4rem !important;
-   }*/
-  .founders_ .padding_space {
-    max-width: 900px !important;
+
+.unreachable_sec {
+  position: relative;
+
+  padding: 6rem 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background-color: #f4f4f4;
+
+
+
+  .title_area {
+
+    h1 {
+
+      font-family: "Anton", sans-serif;
+
+      text-align: center;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    p {
+
+      font-size: 1.25rem;
+
+      text-align: center;
+
+      line-height: 1.5;
+
+    }
+
   }
 
-  .founders_ .founder_footer_content h2 {
-    font-size: 19px !important;
+
+
+  .card_wrapper {
+
+    border-radius: 15px;
+
+
+
+    .card {
+      border-radius: 15px;
+    }
+
+
+
+    .case_card {
+
+      position: relative;
+
+      height: 100%;
+
+      background-color: #ececec;
+
+      border-radius: 15px;
+
+      overflow: hidden;
+
+
+
+      .card {
+
+        border-radius: 15px;
+
+      }
+
+
+
+      .image_wrapper {
+
+        width: auto;
+
+        height: 400px;
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+
+
+        img {
+
+          width: 100%;
+
+          height: 100%;
+
+          object-fit: cover;
+
+          transition: all 0.2s ease-in-out;
+
+        }
+
+
+
+        @media screen and (max-width: 1920px) {
+
+          height: 250px;
+
+        }
+
+      }
+
+
+
+      &:hover {
+
+        z-index: 2;
+
+      }
+
+
+
+      &:hover .image_wrapper img {
+
+        transform: scale(1.1);
+
+      }
+
+
+
+      .case_content {
+
+        padding: 20px;
+
+        padding-top: 3rem;
+
+        text-align: left;
+
+
+
+        h2 {
+
+          font-family: "Anton", sans-serif;
+
+          font-size: 1.25rem;
+
+        }
+
+
+
+        p {
+
+          font-family: "Roboto", sans-serif;
+
+          font-size: 1rem;
+
+        }
+
+      }
+
+    }
+
   }
+
+
+
+  .case_card:hover {
+
+    transform: translateY(-20px);
+
+    border-bottom: 2px solid #FCD901;
+
+    box-shadow: 0 3px 15px #FCD901;
+
+  }
+
+
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 1081px) {
-  .founders_ .banner_wrapper .founder_footer_content {
-    /*padding-bottom: 1rem !important;*/
-    bottom: 40px !important;
-    width: 100% !important;
+
+
+.corevalue_sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250vh;
+  overflow: hidden;
+  background-image: url(@/assets/about/transformation_image.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  .subtitle {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+
+    h1 {
+      font-family: "Anton", sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+
+    p {
+
+      font-size: 1.25rem;
+      font-style: 'Roboto', sans-serif;
+
+      text-align: center;
+
+      line-height: 1.5;
+
+    }
 
   }
 
-  .founders_ .padding_space {
-    max-width: 950px !important;
+}
+
+
+
+
+
+.phil_sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 193vh;
+  overflow: hidden;
+  background-image: url(@/assets/about/philosophy_image.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  .subtitle {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+
+    h1 {
+
+      font-family: "Anton", sans-serif;
+
+      text-align: center;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    p {
+
+      font-size: 1.25rem;
+
+      font-style: 'Roboto', sans-serif;
+
+      text-align: center;
+
+      line-height: 1.5;
+
+    }
+
   }
 
-  .founders_ .founder_footer_content h2 {
-    font-size: 19px !important;
-  }
-
-  .founders_ .founders_card p {
-    padding-top: 0.4rem !important;
-  }
-
-  .founders_ .founder_footer_content .footer_description {
-    padding-top: 0.4rem !important;
-  }
 }
 
 .team_sec {

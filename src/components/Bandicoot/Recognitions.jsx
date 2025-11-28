@@ -43,7 +43,7 @@ const recognitions = [
     logo: rec4,
   },
   {
-    title: "SBM – ERSU Listing",
+    title: "Emergency Response Sanitation Unit",
     description:
       "Listed as Special Purpose Machinery under Emergency Response Sanitation Unit (ERSU) by the Swachh Bharat Mission (SBM).",
     logo: rec5,
