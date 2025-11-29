@@ -7,6 +7,7 @@ export async function generateMetadata() {
     // Replace with your actual Custom Type and UID
     const page = await client.getByUID("metadata", "blogs");
 
+
     const { meta_title, meta_description, keyword, secondary_keyword } = page.data || {};
 
     const getText = (field) => {
@@ -26,7 +27,7 @@ export async function generateMetadata() {
     return {
       title,
       description,
-      keywords: primaryKeywords && secondaryKeywords 
+      keywords: primaryKeywords && secondaryKeywords
         ? `${primaryKeywords}, ${secondaryKeywords}`
         : "",
       alternates: {

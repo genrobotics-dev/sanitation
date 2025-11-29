@@ -32,10 +32,10 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
-  
+
   try {
     const blog = await client.getByUID("blogs", resolvedParams.slug);
-    
+
     if (!blog) {
       return {
         title: "Blog Post Not Found | Genrobotics",
@@ -114,7 +114,7 @@ export async function generateMetadata({ params }) {
 export async function generateStaticParams() {
   try {
     const blogs = await client.getAllByType("blogs");
-    
+
     if (!blogs || blogs.length === 0) {
       console.log("No blogs found, returning empty array");
       return [];
@@ -129,19 +129,42 @@ export async function generateStaticParams() {
   }
 }
 
+// Utility to clean non-breaking spaces from text
+const cleanText = (text) => {
+  if (typeof text !== 'string') return text;
+  return text.replace(/\u00A0/g, ' ');
+};
+
+// Utility to recursively clean Prismic Rich Text fields
+const cleanRichText = (richText) => {
+  if (!Array.isArray(richText)) return richText;
+  return richText.map(node => ({
+    ...node,
+    text: node.text ? cleanText(node.text) : node.text,
+    spans: node.spans ? node.spans.map(span => ({
+      ...span,
+      data: span.data && span.data.url ? { ...span.data, url: span.data.url.trim() } : span.data
+    })) : node.spans
+  }));
+};
+
 export default async function BlogDetailPage({ params }) {
   const resolvedParams = await params; // ✅ required in Next 15+
   const blog = await client
     .getByUID("blogs", resolvedParams.slug)
     .catch(() => null);
-    
+
 
   if (!blog) {
     return <p className="text-center py-10">Blog not found.</p>;
   }
 
+  // Clean the summary and content
+  const cleanSummary = cleanText(blog.data?.summary || '');
+  const cleanContent = cleanRichText(blog?.data?.section?.content || blog?.data?.content || blog?.data?.body);
+
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12 md:py-16 my-16 md:my-24">
+    <article className="max-w-3xl mx-auto px-6 py-12 md:py-16 my-16 md:my-24 break-normal whitespace-normal">
       {/* Banner image above the title */}
       {blog?.data?.image?.url && (
         <figure className="mb-8">
@@ -157,29 +180,27 @@ export default async function BlogDetailPage({ params }) {
 
       {/* Title */}
       <h1 className="text-3xl font-bold mb-6 text-center">
-        {blog.data?.title?.[0]?.text || 'Untitled'}
+        {cleanText(blog.data?.title?.[0]?.text) || 'Untitled'}
       </h1>
 
       {/* Summary as content block */}
-      {blog.data?.summary && (
+      {cleanSummary && (
         <section>
           <h4 className="text-xl font-semibold mt-8 text-[#FCD901]">Summary</h4>
           <p className="mb-8 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
             {/* If summary includes HTML tags (unlikely), render as HTML; otherwise linkify plain URLs */}
-            {/<[a-z][\s\S]*>/i.test(blog.data.summary)
+            {/<[a-z][\s\S]*>/i.test(cleanSummary)
               ? (
-                <span dangerouslySetInnerHTML={{ __html: blog.data.summary }} />
+                <span dangerouslySetInnerHTML={{ __html: cleanSummary }} />
               )
               : (
-                linkify(blog.data.summary)
+                linkify(cleanSummary)
               )}
           </p>
         </section>
       )}
       <PrismicRichText
-        field={
-          blog?.data?.section?.content || blog?.data?.content || blog?.data?.body
-        }
+        field={cleanContent}
         components={serializers}
       />
     </article>

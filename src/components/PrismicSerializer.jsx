@@ -9,7 +9,7 @@ export const serializers = {
   heading4: ({ children }) => <h4 className="text-xl font-semibold mb-2 text-[#FCD901]">{children}</h4>,
   heading5: ({ children }) => <h5 className="text-lg font-medium mb-2">{children}</h5>,
   heading6: ({ children }) => <h6 className="text-base font-medium mb-2">{children}</h6>,
-  paragraph: ({ children }) => <p className="mb-4 text-black">{children}</p>,
+  paragraph: ({ children }) => <p className="mb-4 text-justify text-black">{children}</p>,
   list: ({ children }) => <ul className="list-disc pl-6 mb-4">{children}</ul>,
   oList: ({ children }) => <ol className="list-decimal pl-6 mb-4">{children}</ol>,
   listItem: ({ children }) => <li className="mb-1">{children}</li>,

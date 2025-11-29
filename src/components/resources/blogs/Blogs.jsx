@@ -6,6 +6,12 @@ import * as prismic from "@prismicio/client";
 // Default items per page
 const ITEMS_PER_PAGE = 6;
 
+// Utility to clean non-breaking spaces from text
+const cleanText = (text) => {
+  if (typeof text !== 'string') return text;
+  return text.replace(/\u00A0/g, ' ');
+};
+
 export default async function BlogsPage({ searchParams }) {
   const currentPage = parseInt(searchParams?.page || "1");
 
@@ -17,11 +23,14 @@ export default async function BlogsPage({ searchParams }) {
     page: currentPage,
   });
 
+  console.log({ pageData: response.results });
+
+
   const blogs = response.results.map((b) => ({
     id: b.id,
     uid: b.uid,
-    title: b.data.title[0]?.text || "Untitled",
-    summary: b.data.summary || "",
+    title: cleanText(b.data.title[0]?.text || "Untitled"),
+    summary: cleanText(b.data.summary || ""),
     image: b.data.image?.url,
     last_publication_date: b.last_publication_date,
   }));
@@ -63,12 +72,12 @@ export default async function BlogsPage({ searchParams }) {
                     />
                   </Link>
                 )}
-                <h4 className="font-semibold text-lg sm:text-xl leading-tight break-words">
+                <h4 className="font-semibold text-lg sm:text-xl leading-tight">
                   <Link
                     href={`/blogs/${blog.uid}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-left text-black"
+                    className="text-justify text-black"
                     style={
                       {
                         textDecoration: "none",
@@ -80,7 +89,7 @@ export default async function BlogsPage({ searchParams }) {
                     {blog.title}
                   </Link>
                 </h4>
-                <p className="text-sm mb-4 line-clamp-3 break-words">
+                <p className="text-sm mb-4 line-clamp-3">
                   {blog.summary.slice(0, 250)}...
                 </p>
               </div>
@@ -90,7 +99,7 @@ export default async function BlogsPage({ searchParams }) {
                   href={`/blogs/${blog.uid}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full text-center text-sm font-medium text-black bg-[#FCD901] px-3 py-2 rounded-md hover:bg-[#FFE63D] transition"
+                  className="inline-block w-full text-justify text-sm font-medium text-black bg-[#FCD901] px-3 py-2 rounded-md hover:bg-[#FFE63D] transition"
                   style={
                     {
                       textDecoration: "none"
