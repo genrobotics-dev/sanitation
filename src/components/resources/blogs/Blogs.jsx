@@ -72,7 +72,7 @@ export default async function BlogsPage({ searchParams }) {
                     />
                   </Link>
                 )}
-                <h4 className="font-semibold text-lg sm:text-xl leading-tight">
+                <h4 className="font-semibold text-lg sm:text-xl leading-tight mt-4">
                   <Link
                     href={`/blogs/${blog.uid}`}
                     target="_blank"
@@ -81,7 +81,8 @@ export default async function BlogsPage({ searchParams }) {
                     style={
                       {
                         textDecoration: "none",
-                        fontWeight: "600"
+                        fontWeight: "600",
+                        paddingTop: "2rem"
                       }
                     }
                     aria-label={`Go to blog: ${blog.title}`}
