@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   theme: {
     extend: {
       keyframes: {
@@ -18,9 +17,6 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   optimizeFonts: false,
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   }
