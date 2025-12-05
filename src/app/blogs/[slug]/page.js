@@ -46,12 +46,12 @@ export async function generateMetadata({ params }) {
       };
     }
 
-    const { seo_title, meta_description, primary_keywords, secondary_keywords } = blog.data || {};
+    const { seo_title, meta_description, keywords: keywordsGroup } = blog.data || {};
     const blogTitle = blog.data?.title?.[0]?.text || 'Untitled';
     const blogSummary = blog.data?.summary || '';
 
-    // Helper to extract keywords from Prismic rich text or string
-    const getKeywords = (field) => {
+    // Helper to extract text from Prismic rich text or string
+    const getText = (field) => {
       if (Array.isArray(field)) {
         // Prismic rich text - join all .text blocks
         return field.map(k => typeof k.text === "string" ? k.text : "").join(" ");
@@ -61,16 +61,15 @@ export async function generateMetadata({ params }) {
       return "";
     };
 
-    const primary = getKeywords(primary_keywords);
-    const secondary = getKeywords(secondary_keywords);
-    let keywords = "";
-    if (primary && secondary) {
-      keywords = `${primary}, ${secondary}`;
-    } else if (primary) {
-      keywords = primary;
-    } else if (secondary) {
-      keywords = secondary;
+    let keywordsList = [];
+    if (keywordsGroup && Array.isArray(keywordsGroup)) {
+      keywordsGroup.forEach(item => {
+        if (item.primary_keywords) keywordsList.push(getText(item.primary_keywords));
+        if (item.secondary_keywords) keywordsList.push(getText(item.secondary_keywords));
+        if (item.voice_search_friendly_phrases) keywordsList.push(getText(item.voice_search_friendly_phrases));
+      });
     }
+    const keywords = keywordsList.join(", ");
 
     return {
       title: seo_title || `${blogTitle} | Genrobotics Blog`,
