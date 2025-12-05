@@ -6,7 +6,7 @@ import keralaWaterAuthority from "@/assets/clients/kerala_water_authority.webp";
 import municipalCouncilTadipatri from "@/assets/clients/municipal_council_tadipatri.webp";
 import thoothukudiSmartCity from "@/assets/clients/thoothukudi_smart_city.webp";
 import technopark from "@/assets/clients/technopark.webp";
-
+import zoho from "@/assets/clients/zoho.webp";
 import nelloreMunicipalCorporation from "@/assets/clients/nellore_municipal_corporation.webp";
 import municipalCorporationGurugram from "@/assets/clients/municipal_corporation_gurugram.webp";
 import thanjavurMunicipalCorporation from "@/assets/clients/thanjavur_municipal_corporation.webp";
@@ -82,6 +82,7 @@ const clientsData = [
   { image: municipalCouncilTadipatri, alt: "Municipal Council Tadipatri", width: 150, height: 150 },
   { image: thoothukudiSmartCity, alt: "Thoothukudi Smart City", width: 150, height: 150 },
   { image: technopark, alt: "Technopark", width: 150, height: 150 },
+  { image: zoho, alt: "Zoho", width: 150, height: 150 },
   { image: nelloreMunicipalCorporation, alt: "Nellore Municipal Corporation", width: 150, height: 150 },
   {
     image: municipalCorporationGurugram,
