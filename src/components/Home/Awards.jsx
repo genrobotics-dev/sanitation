@@ -84,7 +84,7 @@ const awards = [
     img: img13,
     title: "ISC FICCI Honour for Outstanding Corporate Initiative",
     subtitle:
-       "For Bandicoot’s innovative approach to improving urban hygiene.",
+      "For Bandicoot’s innovative approach to improving urban hygiene.",
   },
   {
     img: img14,
@@ -120,7 +120,7 @@ function Awards() {
     slidesToShow: 3,
     arrows: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     afterChange: (current) => {
       setActiveSliderIndex(current);

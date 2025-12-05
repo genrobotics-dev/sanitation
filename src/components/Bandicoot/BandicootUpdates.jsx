@@ -57,7 +57,7 @@ function BandicootUpdates() {
     slidesToShow: 1,
     arrows: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3500,
     nextArrow: <CustomNextArrow customId="" />,
     prevArrow: <CustomPrevArrow customId="" />,
