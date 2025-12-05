@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack -p 4095",
     "build": "next build",
-    "postbuild": "node ./scripts/generate-sitemap.mjs",
+    "postbuild": "node ./src/scripts/generate-sitemap.mjs",
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
