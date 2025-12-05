@@ -86,7 +86,7 @@ function Advisors() {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: false,

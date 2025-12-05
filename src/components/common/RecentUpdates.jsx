@@ -16,7 +16,7 @@ function RecentUpdates({ title, description, updates }) {
     slidesToShow: 1,
     arrows: true,
     dots: true,
-    autoplay: true,
+    autoplay: inView,
     autoplaySpeed: 2000,
     nextArrow: <CustomNextArrow customId="update_next" />,
     prevArrow: <CustomPrevArrow customId="update_prev" />,

@@ -15,7 +15,6 @@ const nextConfig = {
   },
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
-  optimizeFonts: false,
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,

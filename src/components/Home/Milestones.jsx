@@ -124,7 +124,7 @@ function Milestones() {
     slidesToShow: 1,
     arrows: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
     pauseOnFocus: true,
     autoplaySpeed: 2500,

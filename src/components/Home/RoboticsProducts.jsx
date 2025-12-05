@@ -92,7 +92,7 @@ function RoboticsProducts() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: inView,
     speed: 2000,
     autoplaySpeed: 4000,
     pauseOnHover: false,
