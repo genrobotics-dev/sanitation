@@ -46,12 +46,12 @@ export async function generateMetadata({ params }) {
       };
     }
 
-    const { seo_title, meta_description, primary_keywords, secondary_keywords } = blog.data || {};
+    const { seo_title, meta_description, keywords: keywordsGroup } = blog.data || {};
     const blogTitle = blog.data?.title?.[0]?.text || 'Untitled';
     const blogSummary = blog.data?.summary || '';
 
-    // Helper to extract keywords from Prismic rich text or string
-    const getKeywords = (field) => {
+    // Helper to extract text from Prismic rich text or string
+    const getText = (field) => {
       if (Array.isArray(field)) {
         // Prismic rich text - join all .text blocks
         return field.map(k => typeof k.text === "string" ? k.text : "").join(" ");
@@ -61,16 +61,15 @@ export async function generateMetadata({ params }) {
       return "";
     };
 
-    const primary = getKeywords(primary_keywords);
-    const secondary = getKeywords(secondary_keywords);
-    let keywords = "";
-    if (primary && secondary) {
-      keywords = `${primary}, ${secondary}`;
-    } else if (primary) {
-      keywords = primary;
-    } else if (secondary) {
-      keywords = secondary;
+    let keywordsList = [];
+    if (keywordsGroup && Array.isArray(keywordsGroup)) {
+      keywordsGroup.forEach(item => {
+        if (item.primary_keywords) keywordsList.push(getText(item.primary_keywords));
+        if (item.secondary_keywords) keywordsList.push(getText(item.secondary_keywords));
+        if (item.voice_search_friendly_phrases) keywordsList.push(getText(item.voice_search_friendly_phrases));
+      });
     }
+    const keywords = keywordsList.join(", ");
 
     return {
       title: seo_title || `${blogTitle} | Genrobotics Blog`,
@@ -129,6 +128,25 @@ export async function generateStaticParams() {
   }
 }
 
+// Utility to clean non-breaking spaces from text
+const cleanText = (text) => {
+  if (typeof text !== 'string') return text;
+  return text.replace(/\u00A0/g, ' ');
+};
+
+// Utility to recursively clean Prismic Rich Text fields
+const cleanRichText = (richText) => {
+  if (!Array.isArray(richText)) return richText;
+  return richText.map(node => ({
+    ...node,
+    text: node.text ? cleanText(node.text) : node.text,
+    spans: node.spans ? node.spans.map(span => ({
+      ...span,
+      data: span.data && span.data.url ? { ...span.data, url: span.data.url.trim() } : span.data
+    })) : node.spans
+  }));
+};
+
 export default async function BlogDetailPage({ params }) {
   const resolvedParams = await params; // ✅ required in Next 15+
   const blog = await client
@@ -140,8 +158,12 @@ export default async function BlogDetailPage({ params }) {
     return <p className="text-center py-10">Blog not found.</p>;
   }
 
+  // Clean the summary and content
+  const cleanSummary = cleanText(blog.data?.summary || '');
+  const cleanContent = cleanRichText(blog?.data?.section?.content || blog?.data?.content || blog?.data?.body);
+
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12 md:py-16 my-16 md:my-24">
+    <article className="max-w-3xl mx-auto px-6 py-12 md:py-16 my-16 md:my-24 break-normal whitespace-normal">
       {/* Banner image above the title */}
       {blog?.data?.image?.url && (
         <figure className="mb-8">
@@ -157,29 +179,27 @@ export default async function BlogDetailPage({ params }) {
 
       {/* Title */}
       <h1 className="text-3xl font-bold mb-6 text-center">
-        {blog.data?.title?.[0]?.text || 'Untitled'}
+        {cleanText(blog.data?.title?.[0]?.text) || 'Untitled'}
       </h1>
 
       {/* Summary as content block */}
-      {blog.data?.summary && (
+      {cleanSummary && (
         <section>
           <h4 className="text-xl font-semibold mt-8 text-[#FCD901]">Summary</h4>
           <p className="mb-8 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
             {/* If summary includes HTML tags (unlikely), render as HTML; otherwise linkify plain URLs */}
-            {/<[a-z][\s\S]*>/i.test(blog.data.summary)
+            {/<[a-z][\s\S]*>/i.test(cleanSummary)
               ? (
-                <span dangerouslySetInnerHTML={{ __html: blog.data.summary }} />
+                <span dangerouslySetInnerHTML={{ __html: cleanSummary }} />
               )
               : (
-                linkify(blog.data.summary)
+                linkify(cleanSummary)
               )}
           </p>
         </section>
       )}
       <PrismicRichText
-        field={
-          blog?.data?.section?.content || blog?.data?.content || blog?.data?.body
-        }
+        field={cleanContent}
         components={serializers}
       />
     </article>

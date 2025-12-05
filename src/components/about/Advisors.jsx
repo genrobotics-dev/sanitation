@@ -86,12 +86,12 @@ function Advisors() {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: false,
     nextArrow: <CustomNextArrow />,
-        prevArrow: <CustomPrevArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1330,

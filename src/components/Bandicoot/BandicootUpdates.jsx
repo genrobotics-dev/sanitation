@@ -57,10 +57,10 @@ function BandicootUpdates() {
     slidesToShow: 1,
     arrows: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3500,
-    nextArrow: <CustomNextArrow customId=""/>,
-    prevArrow: <CustomPrevArrow customId=""/>,
+    nextArrow: <CustomNextArrow customId="" />,
+    prevArrow: <CustomPrevArrow customId="" />,
   };
   return (
     <section className="bandicoot_updates">
